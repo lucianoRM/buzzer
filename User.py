@@ -1,9 +1,10 @@
-from ConnectionManager import ConnectionManager
 from Notifier import Notifier
-from QueueManager import QueueManager
-from threading import Thread
+import pickle
 
-
+'''
+Handles the client buzzer. It's in charge or publishing new buzzes and can notify when
+a new registered channel is updated
+'''
 class User:
 
     connectionManager = None

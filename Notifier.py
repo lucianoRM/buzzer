@@ -1,6 +1,7 @@
 import uuid
 from threading import Thread
-
+import pickle
+from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from QueueManager import QueueManager
 
@@ -21,8 +22,12 @@ class Notifier:
             self.connectionManager.channel.basic_ack(method.delivery_tag)
             self.queueManager.stopListeningToQueue()
         else:
-            print(" [x] Received %r" % body)
-            self.connectionManager.channel.basic_ack(method.delivery_tag)
+            buzz = pickle.loads(body)
+            if(isinstance(buzz,Buzz)):
+                print buzz.message
+                print buzz.user
+                print buzz.uId
+                self.connectionManager.channel.basic_ack(method.delivery_tag)
 
 
     def _startListeningForNotifications(self):
