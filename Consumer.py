@@ -1,13 +1,12 @@
-from QueueManager import QueueManager
-from ConnectionManager import ConnectionManager
+from User import User
+import time
 
-cm = ConnectionManager()
-qm = QueueManager(cm,'testQueue')
+user = User('luciano')
 
-def callback(ch, method, properties, body):
-    print(" [x] Received %r" % body)
+user.login()
+time.sleep(3)
+print "logout"
+user.logout()
 
 
-qm.listenToQueue(callback)
 
-cm.close()

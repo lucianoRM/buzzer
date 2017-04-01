@@ -3,6 +3,7 @@ import pika
 QUEUE_IP = 'localhost'
 QUEUE_PORT = 5672
 
+
 class ConnectionManager:
 
     def __init__(self):

@@ -2,9 +2,9 @@ from QueueManager import QueueManager
 from ConnectionManager import ConnectionManager
 
 cm = ConnectionManager()
-qm = QueueManager(cm,'testQueue')
+qm = QueueManager(cm,'luciano')
 
-qm.writeToQueue('hola mundo!')
+qm.writeToQueue('stop')
 
 cm.close()
 
