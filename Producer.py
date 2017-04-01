@@ -7,7 +7,7 @@ qm = QueueManager(cm,'luciano')
 
 buzz = Buzz("mensaje", "producer")
 
-qm.writeToQueue(str(buzz))
+qm.writeToQueue("sadgasa")
 
 cm.close()
 

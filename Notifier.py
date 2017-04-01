@@ -19,15 +19,17 @@ class Notifier:
 
     def notificationCallback(self, channel, method, properties, body):
         if(body == self.EXIT_KEY):
-            self.connectionManager.channel.basic_ack(method.delivery_tag)
             self.queueManager.stopListeningToQueue()
         else:
-            buzz = pickle.loads(body)
-            if(isinstance(buzz,Buzz)):
+            try:
+                buzz = pickle.loads(body)
                 print buzz.message
                 print buzz.user
                 print buzz.uId
-                self.connectionManager.channel.basic_ack(method.delivery_tag)
+            except:
+                print "Not a Buzz"
+        self.connectionManager.channel.basic_ack(method.delivery_tag)
+
 
 
     def _startListeningForNotifications(self):
