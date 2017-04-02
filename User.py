@@ -1,12 +1,11 @@
 from ConnectionManager import ConnectionManager
 from Notifier import Notifier
-import pickle
 
 from QueueManager import QueueManager
 
 QUEUE_IP = 'localhost'
 QUEUE_PORT = 5672
-SERVER_QUEUE_NAME = 'buzzer'
+SERVER_QUEUE_NAME = 'buzzer_main'
 
 '''
 Handles the client buzzer. It's in charge or publishing new buzzes and can notify when

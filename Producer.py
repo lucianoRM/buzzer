@@ -1,5 +1,6 @@
 from ActionMessage import ActionMessage,FollowUserPetition,ShutdownSystemPetition
 from Buzz import Buzz
+from MessageUtils import MessageUtils
 from User import User
 
 user = User('luciano')
@@ -16,7 +17,7 @@ while(True):
         print "NADA"
         continue
 
-    user.send(str(action))
+    user.send(MessageUtils.serialize(action))
 
 
 

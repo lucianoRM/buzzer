@@ -1,6 +1,6 @@
 import uuid
 from threading import Thread
-import pickle
+from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from QueueManager import QueueManager
 
@@ -23,7 +23,7 @@ class Notifier:
             self.queueManager.stopListeningToQueue()
         else:
             try:
-                buzz = pickle.loads(body)
+                buzz = Buzz(body)
                 print buzz.message
                 print buzz.user
                 print buzz.uId

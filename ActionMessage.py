@@ -1,16 +1,11 @@
 import uuid
 
-import pickle
-
 
 class ActionMessage(object):
 
     def __init__(self, user):
         self.user = user
         self.uId = uuid.uuid4()
-
-    def __str__(self):
-        return pickle.dumps(self)
 
     def createFollowUserPetition(self, otherUser):
         self.data = otherUser
