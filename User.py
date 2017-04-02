@@ -3,7 +3,6 @@ from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from Notifier import Notifier
 
-from QueueManager import QueueManager
 
 QUEUE_IP = 'localhost'
 QUEUE_PORT = 5672
@@ -16,14 +15,13 @@ a new registered channel is updated
 class User:
 
     connectionManager = None
-    queueManager = None
 
 
     def __init__(self, name):
         self.name = name
         self.notifier = Notifier(self.name)
         self.connectionManager = ConnectionManager(QUEUE_IP,QUEUE_PORT)
-        self.queueManager = QueueManager(self.connectionManager, SERVER_QUEUE_NAME)
+        self.connectionManager.declareQueue(SERVER_QUEUE_NAME)
 
     def startNotificationThread(self):
         self.notifier.startListeningForNotifications()
@@ -39,19 +37,19 @@ class User:
 
     def sendBuzz(self, message):
         buzz = Buzz(self.name, message)
-        self.queueManager.writeToQueue(buzz)
+        self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,buzz)
 
     def sendFollowHashtagPetition(self, hashtag):
         petition = FollowHashtagPetition(self.name, hashtag)
-        self.queueManager.writeToQueue(petition)
+        self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,petition)
 
     def sendFollowUserPetition(self, otherUser):
         petition = FollowUserPetition(self.name, otherUser)
-        self.queueManager.writeToQueue(petition)
+        self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,petition)
 
     def sendShutdownPetition(self):
         petition = ShutdownSystemPetition(self.name)
-        self.queueManager.writeToQueue(petition)
+        self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,petition)
 
 
 

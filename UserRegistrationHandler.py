@@ -2,7 +2,7 @@ from ActionMessage import ShutdownSystemPetition,FollowUserPetition,FollowHashta
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from MessageUtils import MessageUtils
-from QueueManager import QueueManager
+import os
 
 INCOMING_QUEUE_IP = 'localhost'
 INCOMING_QUEUE_PORT = 5672
@@ -19,7 +19,15 @@ class UserRegistrationHandler:
     def __init__(self):
         self.incomingConnectionManager = ConnectionManager(INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
         self.outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP,OUTGOING_QUEUE_PORT)
-        self.incomingQueueManager = QueueManager(self.incomingConnectionManager, INCOMING_QUEUE_NAME)
+        self.incomingConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
+        self.initializeUserQueues()
+
+    def initializeUserQueues(self):
+        try:
+            for user in os.listdir(USERS_INFO_FOLDER):
+                self.incomingConnectionManager.declareQueue(user)
+        except:
+            print "Folder path not configured for user registration"
 
 
     def updateUserRegistrations(self,user,registrationTarget):
@@ -71,8 +79,7 @@ class UserRegistrationHandler:
         print followers
         for follower in list(set(followers)):
             if(follower != buzzer): #to avoid sending message to it's own
-                queueManager = QueueManager(self.outgoingConnectionManager, follower)
-                queueManager.writeToQueue(buzz)
+                self.outgoingConnectionManager.writeToQueue(follower, buzz)
 
 
     def onMessageReceived(self, channel, method, properties, body):
@@ -88,18 +95,17 @@ class UserRegistrationHandler:
             print "Buzz send to"
             self.notifyFollowers(message)
         elif(isinstance(message, ShutdownSystemPetition)):
-            self.incomingConnectionManager.channel.basic_ack(method.delivery_tag)
+            self.incomingConnectionManager.ack(method.delivery_tag)
             self.terminate()
             return
-
-        self.incomingConnectionManager.channel.basic_ack(method.delivery_tag)
+        self.incomingConnectionManager.ack(method.delivery_tag)
 
     def waitForMessages(self):
-        self.incomingQueueManager.listenToQueue(self.onMessageReceived)
+        self.incomingConnectionManager.listenToQueue(INCOMING_QUEUE_NAME,self.onMessageReceived)
         "Finished!"
 
     def terminate(self):
-        self.incomingQueueManager.stopListeningToQueue()
+        self.incomingConnectionManager.stopListeningToQueue()
         self.outgoingConnectionManager.close()
         self.incomingConnectionManager.close()
 

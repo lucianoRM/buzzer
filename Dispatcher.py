@@ -2,7 +2,6 @@ from ActionMessage import ActionMessage, ShutdownSystemPetition, FollowUserPetit
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from MessageUtils import MessageUtils
-from QueueManager import QueueManager
 
 INCOMING_CONNECTION_IP = 'localhost'
 INCOMING_CONNECTION_PORT = 5672
@@ -20,22 +19,22 @@ class Dispatcher:
 
     def __init__(self):
         self.incomingUserMessagesConnectionManager = ConnectionManager(INCOMING_CONNECTION_IP,INCOMING_CONNECTION_PORT)
-        self.incomingUserMessagesQueueManager = QueueManager(self.incomingUserMessagesConnectionManager,INCOMING_QUEUE_NAME)
+        self.incomingUserMessagesConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
         self.outgoingUserRegistrationHandlerConnectionManager = ConnectionManager(USER_REGISTRATION_HANDLER_IP,USER_REGISTRATION_HANLDER_PORT)
-        self.outgoingUserRegistrationHandlerQueueManager = QueueManager(self.outgoingUserRegistrationHandlerConnectionManager,USER_REGISTRATION_QUEUE_NAME)
+        self.incomingUserMessagesConnectionManager.declareQueue(USER_REGISTRATION_QUEUE_NAME)
 
     def handleBuzz(self,buzz):
         print "It's a buzz"
-        self.outgoingUserRegistrationHandlerQueueManager.writeToQueue(buzz)
+        self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(USER_REGISTRATION_QUEUE_NAME,buzz)
 
     def handleFollowingPetition(self,petition):
         print "It's a petition!"
-        self.outgoingUserRegistrationHandlerQueueManager.writeToQueue(petition)
+        self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(USER_REGISTRATION_QUEUE_NAME, petition)
 
     def handleShutdown(self,shutdownmessage):
         '''When shutdown, the message should be sent to every node'''
-        self.outgoingUserRegistrationHandlerQueueManager.writeToQueue(shutdownmessage)
-        self.incomingUserMessagesQueueManager.stopListeningToQueue()
+        self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(USER_REGISTRATION_QUEUE_NAME,shutdownmessage)
+        self.outgoingUserRegistrationHandlerConnectionManager.stopListeningToQueue()
         self.incomingUserMessagesConnectionManager.close()
         self.outgoingUserRegistrationHandlerConnectionManager.close()
 
@@ -54,7 +53,7 @@ class Dispatcher:
         self.incomingUserMessagesConnectionManager.channel.basic_ack(method.delivery_tag)
 
     def start(self):
-        self.incomingUserMessagesQueueManager.listenToQueue(self.onMessageReceived)
+        self.incomingUserMessagesConnectionManager.listenToQueue(INCOMING_QUEUE_NAME,self.onMessageReceived)
         "Exited!"
 
 dispatcher = Dispatcher()
