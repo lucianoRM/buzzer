@@ -1,10 +1,11 @@
 import uuid
 from threading import Thread
 import pickle
-from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from QueueManager import QueueManager
 
+QUEUE_IP = 'localhost'
+QUEUE_PORT = 5672
 
 '''Creates a new channel for receiving user notifications'''
 class Notifier:
@@ -13,7 +14,7 @@ class Notifier:
     EXIT_KEY = str(uuid.uuid4())
 
     def __init__(self,queueName):
-        self.connectionManager = ConnectionManager()
+        self.connectionManager = ConnectionManager(QUEUE_IP,QUEUE_PORT)
         self.queueManager = QueueManager(self.connectionManager, queueName)
         self.queueName = queueName
 

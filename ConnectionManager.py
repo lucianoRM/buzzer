@@ -1,13 +1,9 @@
 import pika
 
-QUEUE_IP = 'localhost'
-QUEUE_PORT = 5672
-
-
 class ConnectionManager:
 
-    def __init__(self):
-        self.connection = pika.BlockingConnection(pika.ConnectionParameters(QUEUE_IP, QUEUE_PORT))
+    def __init__(self,ip,port):
+        self.connection = pika.BlockingConnection(pika.ConnectionParameters(ip, port))
         self.channel = self.connection.channel()
 
     def close(self):

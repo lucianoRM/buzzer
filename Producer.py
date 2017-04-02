@@ -1,13 +1,22 @@
+from ActionMessage import ActionMessage,FollowUserPetition,ShutdownSystemPetition
 from Buzz import Buzz
-from QueueManager import QueueManager
-from ConnectionManager import ConnectionManager
+from User import User
 
-cm = ConnectionManager()
-qm = QueueManager(cm,'luciano')
+user = User('luciano')
 
-buzz = Buzz("mensaje", "producer")
+while(True):
+    message = raw_input()
+    if(message == "b"):
+        action = Buzz('message','luciano')
+    elif(message == 'f'):
+        action = FollowUserPetition('luciano', 'pedro')
+    elif(message == 's'):
+        action = ShutdownSystemPetition('luciano')
+    else:
+        print "NADA"
+        continue
 
-qm.writeToQueue("sadgasa")
+    user.send(str(action))
 
-cm.close()
+
 
