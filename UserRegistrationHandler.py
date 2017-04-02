@@ -68,18 +68,25 @@ class UserRegistrationHandler:
         followers += self.getFollowers(buzzer)
         for hashtag in hashtags:
             followers += self.getFollowers(hashtag)
-        print list(set(followers))
+        print followers
+        for follower in list(set(followers)):
+            if(follower != buzzer): #to avoid sending message to it's own
+                queueManager = QueueManager(self.outgoingConnectionManager, follower)
+                queueManager.writeToQueue(buzz)
 
 
     def onMessageReceived(self, channel, method, properties, body):
-        try:
-            message = MessageUtils.deserialize(body)
-        except:
-            print "Error deserializing"
+
+        message = MessageUtils.deserialize(body)
         if(isinstance(message, FollowUserPetition)):
-            print "Is follow user"
+            print "FollowUserPetition"
+            self.register(message.user,message.otherUser)
+        elif(isinstance(message, FollowHashtagPetition)):
+            print "FollowHashtagPetition"
+            self.register(message.user,message.hashtag)
         elif(isinstance(message, Buzz)):
-            print "Is Buzz"
+            print "Buzz send to"
+            self.notifyFollowers(message)
         elif(isinstance(message, ShutdownSystemPetition)):
             self.incomingConnectionManager.channel.basic_ack(method.delivery_tag)
             self.terminate()

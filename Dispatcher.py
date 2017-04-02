@@ -1,4 +1,4 @@
-from ActionMessage import ActionMessage, ShutdownSystemPetition
+from ActionMessage import ActionMessage, ShutdownSystemPetition, FollowUserPetition, FollowHashtagPetition
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from MessageUtils import MessageUtils
@@ -28,6 +28,10 @@ class Dispatcher:
         print "It's a buzz"
         self.outgoingUserRegistrationHandlerQueueManager.writeToQueue(buzz)
 
+    def handleFollowingPetition(self,petition):
+        print "It's a petition!"
+        self.outgoingUserRegistrationHandlerQueueManager.writeToQueue(petition)
+
     def handleShutdown(self,shutdownmessage):
         '''When shutdown, the message should be sent to every node'''
         self.outgoingUserRegistrationHandlerQueueManager.writeToQueue(shutdownmessage)
@@ -39,6 +43,10 @@ class Dispatcher:
         message = MessageUtils.deserialize(body)
         if(isinstance(message,Buzz)):
             self.handleBuzz(message)
+        elif(isinstance(message,FollowUserPetition)):
+            self.handleFollowingPetition(message)
+        elif(isinstance(message,FollowHashtagPetition)):
+            self.handleFollowingPetition(message)
         elif(isinstance(message,ShutdownSystemPetition)):
             self.incomingUserMessagesConnectionManager.channel.basic_ack(method.delivery_tag)
             self.handleShutdown(message)

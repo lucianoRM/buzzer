@@ -2,6 +2,8 @@ import uuid
 from threading import Thread
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
+from InvalidMessageException import InvalidMessageException
+from MessageUtils import MessageUtils
 from QueueManager import QueueManager
 
 QUEUE_IP = 'localhost'
@@ -23,13 +25,15 @@ class Notifier:
             self.queueManager.stopListeningToQueue()
         else:
             try:
-                buzz = Buzz(body)
-                print buzz.message
-                print buzz.user
-                print buzz.uId
-            except:
-                print "Not a Buzz"
-        self.connectionManager.channel.basic_ack(method.delivery_tag)
+                buzz = MessageUtils.deserialize(body)
+            except InvalidMessageException as e:
+                self.connectionManager.channel.basic_ack(method.delivery_tag)
+                raise e
+            print buzz.message
+            print buzz.user
+            print buzz.uId
+            self.connectionManager.channel.basic_ack(method.delivery_tag)
+
 
 
 
@@ -41,7 +45,7 @@ class Notifier:
         self.listeningThread.start()
 
     def stopListeningForNotifications(self):
-        connectionManager = ConnectionManager()
+        connectionManager = ConnectionManager(QUEUE_IP,QUEUE_PORT)
         queueManager = QueueManager(connectionManager, self.queueName)
         queueManager.writeToQueue(self.EXIT_KEY)
         self.listeningThread.join()

@@ -1,3 +1,5 @@
+from ActionMessage import FollowHashtagPetition, FollowUserPetition, ShutdownSystemPetition
+from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from Notifier import Notifier
 
@@ -35,8 +37,22 @@ class User:
     def turnNotificationsOff(self):
         self.stopNotificationThread()
 
-    def send(self, message):
-        self.queueManager.writeToQueue(message)
+    def sendBuzz(self, message):
+        buzz = Buzz(self.name, message)
+        self.queueManager.writeToQueue(buzz)
+
+    def sendFollowHashtagPetition(self, hashtag):
+        petition = FollowHashtagPetition(self.name, hashtag)
+        self.queueManager.writeToQueue(petition)
+
+    def sendFollowUserPetition(self, otherUser):
+        petition = FollowUserPetition(self.name, otherUser)
+        self.queueManager.writeToQueue(petition)
+
+    def sendShutdownPetition(self):
+        petition = ShutdownSystemPetition(self.name)
+        self.queueManager.writeToQueue(petition)
+
 
 
 
