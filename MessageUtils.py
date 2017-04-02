@@ -6,6 +6,7 @@ from InvalidMessageException import InvalidMessageException
 
 class MessageUtils:
 
+
     @classmethod
     def serialize(cls,messageObject):
         return pickle.dumps(messageObject)

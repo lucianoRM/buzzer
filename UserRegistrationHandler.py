@@ -12,6 +12,9 @@ INCOMING_QUEUE_NAME = 'dispatcher-registrationhandler'
 REGISTRATION_FOLDER = './reg'
 USERS_INFO_FOLDER = './reg/users_info'
 
+
+
+'''Persists registrations to hashtags and other users'''
 class UserRegistrationHandler:
 
 
