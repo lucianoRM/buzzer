@@ -1,3 +1,7 @@
+import fcntl
+
+import time
+
 from ActionMessage import ShutdownSystemPetition,FollowUserPetition,FollowHashtagPetition
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
@@ -37,13 +41,16 @@ class UserRegistrationHandler:
         filename = USERS_INFO_FOLDER + '/' + user
         try:
             file = open(filename, 'a+r')
+            fcntl.flock(file, fcntl.LOCK_EX) #Lock file for writing
         except IOError:
             print "Folder path not configured for user registration"
         for line in file:
             if (line.strip() == registrationTarget):
+                fcntl.flock(file, fcntl.LOCK_UN) #unlock file
                 file.close()
                 return False  # User was already registered in target
         file.write(registrationTarget + '\n')
+        fcntl.flock(file, fcntl.LOCK_UN) #unlock file
         file.close()
         return True
 
@@ -55,7 +62,9 @@ class UserRegistrationHandler:
         if(shouldUpdate):
             filename = REGISTRATION_FOLDER + '/' + registrationTarget
             file = open(filename, 'a+r')
+            fcntl.flock(file, fcntl.LOCK_EX) #lock file for writing
             file.write(user + '\n')
+            fcntl.flock(file, fcntl.LOCK_UN)
             file.close()
 
 
@@ -64,11 +73,14 @@ class UserRegistrationHandler:
         followers = []
         try:
             file = open(filename,'r')
+            fcntl.flock(file, fcntl.LOCK_SH)
             for line in file:
                 followers.append(line.strip())
         except IOError:
             #If here is because target does not have any follower so nothing should be done
             return followers
+        fcntl.flock(file, fcntl.LOCK_UN)
+        file.close()
         return followers
 
 
@@ -112,5 +124,5 @@ class UserRegistrationHandler:
         self.outgoingConnectionManager.close()
         self.incomingConnectionManager.close()
 
-urh = UserRegistrationHandler()
-urh.waitForMessages()
+
+
