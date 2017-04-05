@@ -7,11 +7,10 @@ from DBManager import DBManager
 HASHTAG_INDEX_PATH = './index/hashtags'
 
 '''Saves the index to locate users and hashtags in messages'''
-class DBIndexManager(DBManager):
+class DBIndexManager:
 
     def __init__(self,keyLength):
-        DBManager.__init__(self,keyLength)
-
+        self.keyLength = keyLength
 
     def storeHashtagsIndex(self,buzz):
         hashtags = buzz.getHashtags()
@@ -24,8 +23,6 @@ class DBIndexManager(DBManager):
         else:
             fileKey = hashtag[:self.keyLength]
         return fileKey
-
-
 
     def getTagPosition(self,filelines,tag):
         position = 0
@@ -53,7 +50,6 @@ class DBIndexManager(DBManager):
 
     def storeHashtagIndex(self,hashtag,uId):
         filename = HASHTAG_INDEX_PATH + "/" + self.getHashtagFileKey(hashtag)
-        filelines = []
         try:
             filelines = self.getFileLines(filename)
         except IOError as e:
