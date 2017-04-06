@@ -1,8 +1,11 @@
 import fcntl
 
-from DBManager import DBManager
+from ConnectionManager import ConnectionManager
+from Request import Request
 
-
+OUTGOING_QUEUE_IP = 'localhost'
+OUTGOING_QUEUE_PORT = 5672
+OUTGOING_QUEUE_NAME = 'dbaccess-queue'
 
 HASHTAG_INDEX_PATH = './index/hashtags'
 
@@ -11,6 +14,7 @@ class DBIndexManager:
 
     def __init__(self,keyLength):
         self.keyLength = keyLength
+        self.outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP,OUTGOING_QUEUE_PORT)
 
     def storeHashtagsIndex(self,buzz):
         hashtags = buzz.getHashtags()
@@ -61,13 +65,33 @@ class DBIndexManager:
             filelines.append(hashtag + ";" + uId)
         self.writeLines(filename,filelines)
 
+    def getIdList(self,tag):
+        filename = HASHTAG_INDEX_PATH + "/" + self.getHashtagFileKey(tag)
+        args = []
+        try:
+            file = open(filename, 'r')
+            fcntl.flock(file,fcntl.LOCK_SH)
+            for line in file:
+                args = line.split(";")
+                if(args[0] == tag):
+                    break
+            fcntl.flock(file,fcntl.LOCK_UN)
+            file.close()
+            return args[1:]
+        except IOError as e:
+            print e
+
+
+    def processRequest(self,request):
+        ids = self.getIdList(request.tag)
+        for id in ids:
+            self.outgoingConnectionManager.writeToQueue(OUTGOING_QUEUE_NAME,Request(request.user,id))
+
+
+
 
 m = DBIndexManager(5)
 
-m.storeHashtagIndex('#luciano','1')
-m.storeHashtagIndex('#sosoaos','2')
-m.storeHashtagIndex('#lucas','3')
-m.storeHashtagIndex('#luciano','7')
-m.storeHashtagIndex('#','80')
+m.processRequest(Request('luciano','#luciano'))
 
 
