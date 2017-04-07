@@ -28,6 +28,12 @@ class ConnectionManager:
     def ack(self,tag):
         self.channel.basic_ack(tag)
 
+    def declareExchange(self,name):
+        self.channel.exchange_declare(exchange=name,type='topic')
+
+    def bindQueue(self,exchangeName,queueName,pattern):
+        self.channel.queue_bind(exchange=exchangeName,queue=queueName,routing_key=pattern)
+
     def close(self):
         self.connection.close()
 
