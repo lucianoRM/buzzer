@@ -28,9 +28,11 @@ class Notifier:
             except InvalidMessageException as e:
                 self.connectionManager.ack(method.delivery_tag)
                 raise e
-            print buzz.message
-            print buzz.user
-            print buzz.uId
+            print "\n======" + self.queueName + ":Buzz received======="
+            print "ID" + str(buzz.uId)
+            print "USER: " + buzz.user
+            print "MSG: " + buzz.message
+            print "\n"
             self.connectionManager.ack(method.delivery_tag)
 
 

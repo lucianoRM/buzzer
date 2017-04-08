@@ -7,6 +7,7 @@ from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from MessageUtils import MessageUtils
 import os
+import logging
 
 INCOMING_QUEUE_IP = 'localhost'
 INCOMING_QUEUE_PORT = 5672
@@ -24,6 +25,8 @@ class UserRegistrationHandler:
 
 
     def __init__(self):
+        logging.getLogger(self.__class__.__name__)
+        logging.basicConfig(filename="app.log",format = '%(levelname)s:%(asctime)s:%(name)s:%(message)s', level = logging.INFO)
         self.incomingConnectionManager = ConnectionManager(INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
         self.outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP,OUTGOING_QUEUE_PORT)
         self.incomingConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
@@ -34,7 +37,7 @@ class UserRegistrationHandler:
             for user in os.listdir(USERS_INFO_FOLDER):
                 self.incomingConnectionManager.declareQueue(user)
         except:
-            print "Folder path not configured for user registration"
+            logging.error("Folder path not configured for user registration")
 
 
     def updateUserRegistrations(self,user,registrationTarget):
@@ -43,7 +46,7 @@ class UserRegistrationHandler:
             file = open(filename, 'a+r')
             fcntl.flock(file, fcntl.LOCK_EX) #Lock file for writing
         except IOError:
-            print "Folder path not configured for user registration"
+            logging.error("Folder path not configured for user registration")
         for line in file:
             if (line.strip() == registrationTarget):
                 fcntl.flock(file, fcntl.LOCK_UN) #unlock file
@@ -91,7 +94,6 @@ class UserRegistrationHandler:
         followers += self.getFollowers(buzzer)
         for hashtag in hashtags:
             followers += self.getFollowers(hashtag)
-        print followers
         for follower in list(set(followers)):
             if(follower != buzzer): #to avoid sending message to it's own
                 self.outgoingConnectionManager.writeToQueue(follower, buzz)
@@ -101,13 +103,13 @@ class UserRegistrationHandler:
 
         message = MessageUtils.deserialize(body)
         if(isinstance(message, FollowUserPetition)):
-            print "FollowUserPetition"
+            logging.info("processing follow user petition")
             self.register(message.user,message.otherUser)
         elif(isinstance(message, FollowHashtagPetition)):
-            print "FollowHashtagPetition"
+            logging.info("processing follow hashtag petition")
             self.register(message.user,message.hashtag)
         elif(isinstance(message, Buzz)):
-            print "Buzz send to"
+            logging.info("processed buzz")
             self.notifyFollowers(message)
         elif(isinstance(message, ShutdownSystemPetition)):
             self.incomingConnectionManager.ack(method.delivery_tag)
@@ -117,7 +119,6 @@ class UserRegistrationHandler:
 
     def waitForMessages(self):
         self.incomingConnectionManager.listenToQueue(INCOMING_QUEUE_NAME,self.onMessageReceived)
-        "Finished!"
 
     def terminate(self):
         self.incomingConnectionManager.stopListeningToQueue()

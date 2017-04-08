@@ -1,0 +1,674 @@
+INFO:2017-04-08 19:30:43,303:root:Sent follow user petition
+INFO:2017-04-08 19:30:43,304:root:Received message
+INFO:2017-04-08 19:30:43,307:root:Processing following petition
+INFO:2017-04-08 19:30:43,307:root:Sent follow user petition
+INFO:2017-04-08 19:30:43,311:root:Received message
+INFO:2017-04-08 19:30:43,312:root:Processing following petition
+INFO:2017-04-08 19:30:43,313:root:Sent follow hashtag petition
+INFO:2017-04-08 19:30:43,315:root:Received message
+INFO:2017-04-08 19:30:43,316:root:Processing following petition
+INFO:2017-04-08 19:30:49,253:root:Sent buzz
+INFO:2017-04-08 19:30:49,255:root:Received message
+INFO:2017-04-08 19:30:49,256:root:Processing buzz
+INFO:2017-04-08 19:30:49,270:root:Request received
+INFO:2017-04-08 19:30:49,272:root:Processing request
+INFO:2017-04-08 19:30:49,273:root:Processing request
+INFO:2017-04-08 19:30:49,276:root:Storing buzz
+INFO:2017-04-08 19:30:49,278:root:Worker started
+INFO:2017-04-08 19:30:49,279:root:Releasing semaphore
+INFO:2017-04-08 19:30:53,094:root:Sent buzz
+INFO:2017-04-08 19:30:53,096:root:Received message
+INFO:2017-04-08 19:30:53,097:root:Processing buzz
+INFO:2017-04-08 19:30:53,103:root:Request received
+INFO:2017-04-08 19:30:53,104:root:Processing request
+INFO:2017-04-08 19:30:53,106:root:Storing buzz
+INFO:2017-04-08 19:30:53,107:root:Releasing semaphore
+INFO:2017-04-08 19:30:53,110:root:Processing request
+INFO:2017-04-08 19:30:53,111:root:Worker started
+INFO:2017-04-08 19:30:54,249:root:Sent buzz
+INFO:2017-04-08 19:30:54,252:root:Received message
+INFO:2017-04-08 19:30:54,252:root:Processing buzz
+INFO:2017-04-08 19:30:54,262:root:Request received
+INFO:2017-04-08 19:30:54,263:root:Processing request
+INFO:2017-04-08 19:30:54,266:root:Storing buzz
+INFO:2017-04-08 19:30:54,269:root:Processing request
+INFO:2017-04-08 19:30:54,270:root:Worker started
+INFO:2017-04-08 19:30:54,272:root:Releasing semaphore
+INFO:2017-04-08 19:33:13,149:root:Sent follow user petition
+INFO:2017-04-08 19:33:13,149:root:Sent follow user petition
+INFO:2017-04-08 19:33:13,150:root:Sent follow hashtag petition
+INFO:2017-04-08 19:33:13,151:root:Received message
+INFO:2017-04-08 19:33:13,152:root:Processing following petition
+INFO:2017-04-08 19:33:13,152:root:Received message
+INFO:2017-04-08 19:33:13,152:root:Processing following petition
+INFO:2017-04-08 19:33:13,153:root:processing follow user petition
+INFO:2017-04-08 19:33:13,155:root:Received message
+INFO:2017-04-08 19:33:13,155:root:Processing following petition
+INFO:2017-04-08 19:33:13,156:root:processing follow user petition
+INFO:2017-04-08 19:33:13,157:root:processing follow hashtag petition
+INFO:2017-04-08 19:33:13,542:root:Sent buzz
+INFO:2017-04-08 19:33:13,543:root:Received message
+INFO:2017-04-08 19:33:13,544:root:Processing buzz
+INFO:2017-04-08 19:33:13,548:root:processed buzz
+INFO:2017-04-08 19:33:13,554:root:Request received
+INFO:2017-04-08 19:33:13,555:root:Processing request
+INFO:2017-04-08 19:33:13,556:root:Storing buzz
+INFO:2017-04-08 19:33:13,557:root:Releasing semaphore
+INFO:2017-04-08 19:33:13,559:root:Processing request
+INFO:2017-04-08 19:33:13,560:root:Worker started
+INFO:2017-04-08 19:33:14,438:root:Sent buzz
+INFO:2017-04-08 19:33:14,441:root:Received message
+INFO:2017-04-08 19:33:14,442:root:Processing buzz
+INFO:2017-04-08 19:33:14,446:root:processed buzz
+INFO:2017-04-08 19:33:14,451:root:Request received
+INFO:2017-04-08 19:33:14,451:root:Processing request
+INFO:2017-04-08 19:33:14,452:root:Storing buzz
+INFO:2017-04-08 19:33:14,454:root:Processing request
+INFO:2017-04-08 19:33:14,456:root:Releasing semaphore
+INFO:2017-04-08 19:33:14,456:root:Worker started
+INFO:2017-04-08 19:33:15,808:root:Sent buzz
+INFO:2017-04-08 19:33:15,809:root:Received message
+INFO:2017-04-08 19:33:15,811:root:Processing buzz
+INFO:2017-04-08 19:33:15,816:root:processed buzz
+INFO:2017-04-08 19:33:15,820:root:Request received
+INFO:2017-04-08 19:33:15,823:root:Processing request
+INFO:2017-04-08 19:33:15,823:root:Storing buzz
+INFO:2017-04-08 19:33:15,826:root:Processing request
+INFO:2017-04-08 19:33:15,828:root:Releasing semaphore
+INFO:2017-04-08 19:33:15,830:root:Worker started
+INFO:2017-04-08 19:36:42,053:root:Sent follow user petition
+INFO:2017-04-08 19:36:42,054:root:Received message
+INFO:2017-04-08 19:36:42,054:root:Processing following petition
+INFO:2017-04-08 19:36:42,055:root:Sent follow user petition
+INFO:2017-04-08 19:36:42,055:root:Received message
+INFO:2017-04-08 19:36:42,055:root:Processing following petition
+INFO:2017-04-08 19:36:42,055:root:processing follow user petition
+INFO:2017-04-08 19:36:42,056:root:Sent follow hashtag petition
+INFO:2017-04-08 19:36:42,056:root:Received message
+INFO:2017-04-08 19:36:42,057:root:Processing following petition
+INFO:2017-04-08 19:36:42,057:root:processing follow user petition
+INFO:2017-04-08 19:36:42,058:root:processing follow hashtag petition
+INFO:2017-04-08 19:36:43,302:root:Sent buzz
+INFO:2017-04-08 19:36:43,305:root:Received message
+INFO:2017-04-08 19:36:43,306:root:Processing buzz
+INFO:2017-04-08 19:36:43,312:root:Request received
+INFO:2017-04-08 19:36:43,313:root:Processing request
+INFO:2017-04-08 19:36:43,314:root:Storing buzz
+INFO:2017-04-08 19:36:43,315:root:Processing request
+INFO:2017-04-08 19:36:43,318:root:processed buzz
+INFO:2017-04-08 19:36:43,319:root:Releasing semaphore
+INFO:2017-04-08 19:36:43,320:root:Worker started
+INFO:2017-04-08 19:36:55,025:root:Sent buzz
+INFO:2017-04-08 19:36:55,027:root:Received message
+INFO:2017-04-08 19:36:55,028:root:Processing buzz
+INFO:2017-04-08 19:36:55,035:root:processed buzz
+INFO:2017-04-08 19:36:55,037:root:Request received
+INFO:2017-04-08 19:36:55,039:root:Processing request
+INFO:2017-04-08 19:36:55,040:root:Processing request
+INFO:2017-04-08 19:36:55,042:root:Storing buzz
+INFO:2017-04-08 19:36:55,042:root:Worker started
+INFO:2017-04-08 19:36:55,044:root:Releasing semaphore
+INFO:2017-04-08 19:37:04,456:root:Sent buzz
+INFO:2017-04-08 19:37:04,458:root:Received message
+INFO:2017-04-08 19:37:04,459:root:Processing buzz
+INFO:2017-04-08 19:37:04,464:root:processed buzz
+INFO:2017-04-08 19:37:04,468:root:Request received
+INFO:2017-04-08 19:37:04,470:root:Processing request
+INFO:2017-04-08 19:37:04,471:root:Processing request
+INFO:2017-04-08 19:37:04,472:root:Worker started
+INFO:2017-04-08 19:37:04,472:root:Storing buzz
+INFO:2017-04-08 19:37:04,476:root:Releasing semaphore
+INFO:User:2017-04-08 19:48:10,586:root:Sent follow user petition
+INFO:Dispatcher:2017-04-08 19:48:10,591:root:Received message
+INFO:Dispatcher:2017-04-08 19:48:10,592:root:Processing following petition
+INFO:User:2017-04-08 19:48:10,595:root:Sent follow user petition
+INFO:Dispatcher:2017-04-08 19:48:10,597:root:Received message
+INFO:UserRegistrationHandler:2017-04-08 19:48:10,598:root:processing follow user petition
+INFO:Dispatcher:2017-04-08 19:48:10,599:root:Processing following petition
+INFO:Dispatcher:2017-04-08 19:48:10,600:root:Received message
+INFO:Dispatcher:2017-04-08 19:48:10,600:root:Processing following petition
+INFO:UserRegistrationHandler:2017-04-08 19:48:10,602:root:processing follow user petition
+INFO:UserRegistrationHandler:2017-04-08 19:48:10,602:root:processing follow hashtag petition
+INFO:User:2017-04-08 19:48:10,599:root:Sent follow hashtag petition
+INFO:User:2017-04-08 19:48:10,623:root:Sent buzz
+INFO:Dispatcher:2017-04-08 19:48:10,624:root:Received message
+INFO:Dispatcher:2017-04-08 19:48:10,624:root:Processing buzz
+INFO:UserRegistrationHandler:2017-04-08 19:48:10,626:root:processed buzz
+INFO:DBIndexProcessingPool:2017-04-08 19:48:10,627:root:Processing request
+INFO:DBBuzzProcessingPool:2017-04-08 19:48:10,628:root:Request received
+INFO:DBBuzzProcessingPool:2017-04-08 19:48:10,628:root:Processing request
+INFO:DBBuzzManager:2017-04-08 19:48:10,628:root:Storing buzz
+INFO:DBIndexProcessingPool:2017-04-08 19:48:10,629:root:Worker started
+INFO:DBBuzzProcessingPool:2017-04-08 19:48:10,631:root:Releasing semaphore
+INFO:User:2017-04-08 19:48:10,753:root:Sent buzz
+INFO:Dispatcher:2017-04-08 19:48:10,755:root:Received message
+INFO:Dispatcher:2017-04-08 19:48:10,756:root:Processing buzz
+INFO:UserRegistrationHandler:2017-04-08 19:48:10,761:root:processed buzz
+INFO:DBBuzzProcessingPool:2017-04-08 19:48:10,768:root:Request received
+INFO:DBBuzzProcessingPool:2017-04-08 19:48:10,774:root:Processing request
+INFO:DBBuzzManager:2017-04-08 19:48:10,774:root:Storing buzz
+INFO:DBIndexProcessingPool:2017-04-08 19:48:10,776:root:Processing request
+INFO:DBIndexProcessingPool:2017-04-08 19:48:10,778:root:Worker started
+INFO:DBBuzzProcessingPool:2017-04-08 19:48:10,780:root:Releasing semaphore
+INFO:2017-04-08 20:00:02,308:Dispatcher:root:Received message
+INFO:2017-04-08 20:00:02,308:User:root:Sent follow user petition
+INFO:2017-04-08 20:00:02,308:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:00:02,309:User:root:Sent follow user petition
+INFO:2017-04-08 20:00:02,310:User:root:Sent follow hashtag petition
+INFO:2017-04-08 20:00:02,310:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:00:02,311:Dispatcher:root:Received message
+INFO:2017-04-08 20:00:02,311:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:00:02,312:Dispatcher:root:Received message
+INFO:2017-04-08 20:00:02,312:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:00:02,312:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:00:02,313:UserRegistrationHandler:root:processing follow hashtag petition
+INFO:2017-04-08 20:03:21,009:User:root:Sent follow user petition
+INFO:2017-04-08 20:03:21,015:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:21,016:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:03:21,017:User:root:Sent follow user petition
+INFO:2017-04-08 20:03:21,018:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:03:21,018:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:21,019:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:03:21,020:User:root:Sent follow hashtag petition
+INFO:2017-04-08 20:03:21,022:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:21,022:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:03:21,024:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:03:21,024:UserRegistrationHandler:root:processing follow hashtag petition
+INFO:2017-04-08 20:03:27,879:User:root:Sent buzz
+INFO:2017-04-08 20:03:27,881:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:27,882:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:03:27,894:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:27,897:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:03:27,899:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:03:27,901:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:03:27,907:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:27,908:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:03:27,909:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:03:31,701:User:root:Sent buzz
+INFO:2017-04-08 20:03:31,703:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:31,704:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:03:31,708:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:03:31,714:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:03:31,717:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:31,718:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:31,721:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:03:31,722:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:03:31,723:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:03:33,007:User:root:Sent buzz
+INFO:2017-04-08 20:03:33,009:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:33,010:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:03:33,013:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:03:33,026:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:33,028:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:03:33,028:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:03:33,030:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:33,031:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:03:33,032:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:03:42,860:User:root:Sent follow user petition
+INFO:2017-04-08 20:03:42,861:User:root:Sent follow user petition
+INFO:2017-04-08 20:03:42,862:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:42,863:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:03:42,865:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:42,865:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:03:42,864:User:root:Sent follow hashtag petition
+INFO:2017-04-08 20:03:42,870:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:03:42,871:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:03:42,871:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:42,872:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:03:42,874:UserRegistrationHandler:root:processing follow hashtag petition
+INFO:2017-04-08 20:03:43,985:User:root:Sent buzz
+INFO:2017-04-08 20:03:43,986:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:43,987:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:03:43,994:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:03:43,997:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:43,998:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:03:44,001:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:03:44,003:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:44,006:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:03:44,011:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:03:48,462:User:root:Sent buzz
+INFO:2017-04-08 20:03:48,464:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:48,465:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:03:48,471:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:03:48,476:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:03:48,478:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:48,479:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:03:48,481:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:03:48,484:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:48,485:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:03:53,069:User:root:Sent buzz
+INFO:2017-04-08 20:03:53,072:Dispatcher:root:Received message
+INFO:2017-04-08 20:03:53,073:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:03:53,078:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:03:53,082:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:03:53,086:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:53,088:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:03:53,089:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:03:53,090:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:03:53,091:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:01,981:User:root:Sent follow user petition
+INFO:2017-04-08 20:12:01,984:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:01,986:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:12:01,987:User:root:Sent follow user petition
+INFO:2017-04-08 20:12:01,990:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:01,991:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:12:01,993:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:12:01,996:User:root:Sent follow hashtag petition
+INFO:2017-04-08 20:12:01,998:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:12:02,000:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:02,000:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:12:02,003:UserRegistrationHandler:root:processing follow hashtag petition
+INFO:2017-04-08 20:12:03,136:User:root:Sent buzz
+INFO:2017-04-08 20:12:03,137:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:03,138:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:12:03,148:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:03,149:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:12:03,161:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:03,158:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:03,167:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:12:03,165:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:12:03,169:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:17,773:User:root:Sent buzz
+INFO:2017-04-08 20:12:17,775:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:17,775:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:12:17,780:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:12:17,787:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:17,788:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:17,789:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:12:17,790:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:17,797:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:17,798:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:12:29,649:User:root:Sent buzz
+INFO:2017-04-08 20:12:29,651:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:29,652:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:12:29,658:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:29,660:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:12:29,660:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:29,670:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:29,670:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:12:29,676:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:29,677:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:12:36,074:User:root:Sent buzz
+INFO:2017-04-08 20:12:36,077:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:36,077:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:12:36,083:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:12:36,088:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:36,090:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:36,091:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:12:36,092:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:36,095:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:12:36,096:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:38,660:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:38,661:Dispatcher:root:Processing query request 
+INFO:2017-04-08 20:12:38,664:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,665:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:12:38,666:DBIndexManager:root:processing user1
+INFO:2017-04-08 20:12:38,686:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,687:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,688:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,690:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:38,690:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,692:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:38,691:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,692:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,692:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:38,693:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:38,693:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,694:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,694:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:38,694:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,695:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:38,698:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,697:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:38,698:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,701:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,699:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,700:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:38,698:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:38,702:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:38,702:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,701:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,703:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,704:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:38,704:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:38,706:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:38,707:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,708:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:38,707:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,708:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,708:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:38,708:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,708:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,709:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:38,709:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:38,709:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:38,710:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:38,716:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:38,721:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,724:DBBuzzProcessingPool:root:Request received
+WARNING:2017-04-08 20:12:38,724:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,729:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,729:DBBuzzManager:root:Retrieving buzz
+WARNING:2017-04-08 20:12:38,729:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,730:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:38,731:DBBuzzProcessingPool:root:Request received
+WARNING:2017-04-08 20:12:38,734:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,731:DBBuzzManager:root:Sending to user
+WARNING:2017-04-08 20:12:38,733:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,734:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:38,731:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,742:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,736:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:38,738:DBBuzzProcessingPool:root:Request received
+WARNING:2017-04-08 20:12:38,741:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,742:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:38,736:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:38,743:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,743:DBBuzzProcessingPool:root:Processing request
+WARNING:2017-04-08 20:12:38,743:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,744:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:38,747:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:38,748:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:38,748:DBBuzzManager:root:Retrieving buzz
+WARNING:2017-04-08 20:12:38,749:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,750:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:38,750:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:38,751:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:38,753:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:38,757:DBBuzzManager:root:Sending to user
+WARNING:2017-04-08 20:12:38,762:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,763:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:38,764:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,764:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:38,770:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,770:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:38,772:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:38,772:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:48,353:User:root:Sent delete message
+INFO:2017-04-08 20:12:48,355:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:48,356:Dispatcher:root:Processing delete request
+INFO:2017-04-08 20:12:48,360:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:48,361:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:48,361:DBBuzzManager:root:Deleting buzz
+INFO:2017-04-08 20:12:48,363:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:50,524:Dispatcher:root:Received message
+INFO:2017-04-08 20:12:50,525:Dispatcher:root:Processing query request 
+INFO:2017-04-08 20:12:50,529:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,529:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:12:50,530:DBIndexManager:root:processing user2
+INFO:2017-04-08 20:12:50,552:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,554:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,558:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,559:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,560:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,563:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,563:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,564:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,565:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,566:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,567:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,568:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,570:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,570:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,573:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,576:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,576:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,579:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,579:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,583:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,583:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,590:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,592:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,587:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,589:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,583:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,584:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,599:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,600:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,601:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,609:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,601:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,613:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,610:DBBuzzManager:root:Retrieving buzz
+WARNING:2017-04-08 20:12:50,616:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,638:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:50,626:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,635:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,640:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,640:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,640:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:12:50,642:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,632:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,644:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,644:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,643:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,645:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,645:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,646:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,646:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,647:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,647:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,647:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,648:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,648:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,649:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,649:DBBuzzManager:root:Retrieving buzz
+WARNING:2017-04-08 20:12:50,655:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,656:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:50,652:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,658:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,659:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:12:50,660:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:12:50,662:DBBuzzManager:root:Processing request
+WARNING:2017-04-08 20:12:50,665:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,667:DBBuzzProcessingPool:root:Processing request
+WARNING:2017-04-08 20:12:50,674:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,674:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:50,674:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-08 20:12:50,675:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,678:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:50,675:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:50,678:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,671:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,676:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:12:50,679:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:50,679:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,680:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:12:50,680:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:12:50,681:DBBuzzManager:root:Sending to user
+INFO:2017-04-08 20:12:50,682:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:50,686:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,687:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:50,688:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,688:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:12:50,691:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:12:50,691:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:14:40,840:User:root:Sent follow user petition
+INFO:2017-04-08 20:14:40,843:Dispatcher:root:Received message
+INFO:2017-04-08 20:14:40,845:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:14:40,848:User:root:Sent follow user petition
+INFO:2017-04-08 20:14:40,850:User:root:Sent follow hashtag petition
+INFO:2017-04-08 20:14:40,851:Dispatcher:root:Received message
+INFO:2017-04-08 20:14:40,852:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:14:40,853:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:14:40,855:UserRegistrationHandler:root:processing follow user petition
+INFO:2017-04-08 20:14:40,856:Dispatcher:root:Received message
+INFO:2017-04-08 20:14:40,856:Dispatcher:root:Processing following petition
+INFO:2017-04-08 20:14:40,858:UserRegistrationHandler:root:processing follow hashtag petition
+INFO:2017-04-08 20:14:44,233:User:root:Sent buzz
+INFO:2017-04-08 20:14:44,236:Dispatcher:root:Received message
+INFO:2017-04-08 20:14:44,237:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:14:44,241:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:14:44,245:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:14:44,251:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:14:44,254:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:14:44,258:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:14:44,259:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:14:44,260:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:14:54,813:User:root:Sent buzz
+INFO:2017-04-08 20:14:54,816:Dispatcher:root:Received message
+INFO:2017-04-08 20:14:54,816:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:14:54,821:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:14:54,825:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:14:54,827:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:14:54,829:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:14:54,831:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:14:54,832:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:14:54,833:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:15:00,204:User:root:Sent buzz
+INFO:2017-04-08 20:15:00,205:Dispatcher:root:Received message
+INFO:2017-04-08 20:15:00,206:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:15:00,212:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:15:00,214:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:15:00,215:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:00,216:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:15:00,221:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:00,225:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:15:00,226:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:15:06,591:User:root:Sent buzz
+INFO:2017-04-08 20:15:06,593:Dispatcher:root:Received message
+INFO:2017-04-08 20:15:06,594:Dispatcher:root:Processing buzz
+INFO:2017-04-08 20:15:06,598:UserRegistrationHandler:root:processed buzz
+INFO:2017-04-08 20:15:06,608:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:15:06,609:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:06,611:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:06,611:DBBuzzManager:root:Storing buzz
+INFO:2017-04-08 20:15:06,613:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:15:06,614:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:15:09,313:Dispatcher:root:Received message
+INFO:2017-04-08 20:15:09,314:Dispatcher:root:Processing query request 
+INFO:2017-04-08 20:15:09,317:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:09,318:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:15:09,319:DBIndexManager:root:processing user2
+INFO:2017-04-08 20:15:09,339:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:15:09,341:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:15:09,345:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:15:09,346:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:09,347:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:15:09,347:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:15:09,350:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:15:09,351:DBBuzzManager:root:Sending to user
+WARNING:2017-04-08 20:15:09,352:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:15:09,358:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:09,358:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:15:09,359:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:15:09,360:DBBuzzManager:root:Sending to user
+WARNING:2017-04-08 20:15:09,400:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:15:09,401:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:15:09,402:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:15:09,403:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:15:17,452:User:root:Sent delete message
+INFO:2017-04-08 20:15:17,455:Dispatcher:root:Received message
+INFO:2017-04-08 20:15:17,455:Dispatcher:root:Processing delete request
+INFO:2017-04-08 20:15:17,459:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:15:17,460:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:17,461:DBBuzzManager:root:Deleting buzz
+INFO:2017-04-08 20:15:17,462:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:15:19,683:Dispatcher:root:Received message
+INFO:2017-04-08 20:15:19,684:Dispatcher:root:Processing query request 
+INFO:2017-04-08 20:15:19,687:DBIndexProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:19,688:DBIndexProcessingPool:root:Worker started
+INFO:2017-04-08 20:15:19,689:DBIndexManager:root:processing user2
+INFO:2017-04-08 20:15:19,710:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:15:19,713:DBIndexManager:root:Sending id to DB
+INFO:2017-04-08 20:15:19,716:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:15:19,718:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:19,720:DBBuzzProcessingPool:root:Request received
+INFO:2017-04-08 20:15:19,721:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:15:19,721:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:15:19,725:DBBuzzProcessingPool:root:Processing request
+INFO:2017-04-08 20:15:19,726:DBBuzzManager:root:Processing request
+INFO:2017-04-08 20:15:19,727:DBBuzzManager:root:Retrieving buzz
+INFO:2017-04-08 20:15:19,727:DBBuzzManager:root:Sending to user
+WARNING:2017-04-08 20:15:19,730:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:15:19,730:DBBuzzProcessingPool:root:Releasing semaphore
+WARNING:2017-04-08 20:15:19,755:connection:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:15:19,756:DBBuzzProcessingPool:root:Releasing semaphore
+INFO:2017-04-08 20:21:57,665:User@58:root:Sent follow user petition
+INFO:2017-04-08 20:21:57,667:Dispatcher@71:root:Received message
+INFO:2017-04-08 20:21:57,669:Dispatcher@52:root:Processing following petition
+INFO:2017-04-08 20:21:57,676:UserRegistrationHandler@106:root:processing follow user petition
+INFO:2017-04-08 20:21:57,677:User@58:root:Sent follow user petition
+INFO:2017-04-08 20:21:57,680:User@53:root:Sent follow hashtag petition
+INFO:2017-04-08 20:21:57,682:Dispatcher@71:root:Received message
+INFO:2017-04-08 20:21:57,683:Dispatcher@52:root:Processing following petition
+INFO:2017-04-08 20:21:57,688:UserRegistrationHandler@106:root:processing follow user petition
+INFO:2017-04-08 20:21:57,689:Dispatcher@71:root:Received message
+INFO:2017-04-08 20:21:57,690:Dispatcher@52:root:Processing following petition
+INFO:2017-04-08 20:21:57,696:UserRegistrationHandler@109:root:processing follow hashtag petition
+INFO:2017-04-08 20:21:57,730:User@47:root:Sent buzz
+INFO:2017-04-08 20:21:57,731:Dispatcher@71:root:Received message
+INFO:2017-04-08 20:21:57,732:Dispatcher@46:root:Processing buzz
+INFO:2017-04-08 20:21:57,738:UserRegistrationHandler@112:root:processed buzz
+INFO:2017-04-08 20:21:57,743:DBBuzzProcessingPool@51:root:Request received
+INFO:2017-04-08 20:21:57,745:DBBuzzProcessingPool@23:root:Processing request
+INFO:2017-04-08 20:21:57,746:DBBuzzManager@38:root:Storing buzz
+INFO:2017-04-08 20:21:57,753:DBBuzzProcessingPool@31:root:Releasing semaphore
+INFO:2017-04-08 20:21:57,765:DBIndexProcessingPool@46:root:Processing request
+INFO:2017-04-08 20:21:57,770:DBIndexProcessingPool@21:root:Worker started
+INFO:2017-04-08 20:21:58,734:User@47:root:Sent buzz
+INFO:2017-04-08 20:21:58,736:Dispatcher@71:root:Received message
+INFO:2017-04-08 20:21:58,737:Dispatcher@46:root:Processing buzz
+INFO:2017-04-08 20:21:58,741:UserRegistrationHandler@112:root:processed buzz
+INFO:2017-04-08 20:21:58,747:DBBuzzProcessingPool@51:root:Request received
+INFO:2017-04-08 20:21:58,748:DBBuzzProcessingPool@23:root:Processing request
+INFO:2017-04-08 20:21:58,749:DBBuzzManager@38:root:Storing buzz
+INFO:2017-04-08 20:21:58,755:DBIndexProcessingPool@46:root:Processing request
+INFO:2017-04-08 20:21:58,762:DBBuzzProcessingPool@31:root:Releasing semaphore
+INFO:2017-04-08 20:21:58,765:DBIndexProcessingPool@21:root:Worker started
+INFO:2017-04-08 20:21:59,738:User@47:root:Sent buzz
+INFO:2017-04-08 20:21:59,740:Dispatcher@71:root:Received message
+INFO:2017-04-08 20:21:59,741:Dispatcher@46:root:Processing buzz
+INFO:2017-04-08 20:21:59,745:UserRegistrationHandler@112:root:processed buzz
+INFO:2017-04-08 20:21:59,749:DBBuzzProcessingPool@51:root:Request received
+INFO:2017-04-08 20:21:59,750:DBBuzzProcessingPool@23:root:Processing request
+INFO:2017-04-08 20:21:59,753:DBBuzzManager@38:root:Storing buzz
+INFO:2017-04-08 20:21:59,764:DBIndexProcessingPool@46:root:Processing request
+INFO:2017-04-08 20:21:59,767:DBBuzzProcessingPool@31:root:Releasing semaphore
+INFO:2017-04-08 20:21:59,768:DBIndexProcessingPool@21:root:Worker started
+INFO:2017-04-08 20:22:00,742:User@47:root:Sent buzz
+INFO:2017-04-08 20:22:00,744:Dispatcher@71:root:Received message
+INFO:2017-04-08 20:22:00,745:Dispatcher@46:root:Processing buzz
+INFO:2017-04-08 20:22:00,750:UserRegistrationHandler@112:root:processed buzz
+INFO:2017-04-08 20:22:00,757:DBBuzzProcessingPool@51:root:Request received
+INFO:2017-04-08 20:22:00,760:DBIndexProcessingPool@46:root:Processing request
+INFO:2017-04-08 20:22:00,763:DBIndexProcessingPool@21:root:Worker started
+INFO:2017-04-08 20:22:00,768:DBBuzzProcessingPool@23:root:Processing request
+INFO:2017-04-08 20:22:00,768:DBBuzzManager@38:root:Storing buzz
+INFO:2017-04-08 20:22:00,769:DBBuzzProcessingPool@31:root:Releasing semaphore
+INFO:2017-04-08 20:22:01,752:Dispatcher@71:root:Received message
+INFO:2017-04-08 20:22:01,752:Dispatcher@56:root:Processing query request 
+INFO:2017-04-08 20:22:01,764:DBIndexProcessingPool@46:root:Processing request
+INFO:2017-04-08 20:22:01,765:DBIndexProcessingPool@21:root:Worker started
+INFO:2017-04-08 20:22:01,766:DBIndexManager@94:root:processing user2
+INFO:2017-04-08 20:22:01,796:DBIndexManager@99:root:Sending id to DB
+INFO:2017-04-08 20:22:01,798:DBIndexManager@99:root:Sending id to DB
+INFO:2017-04-08 20:22:01,799:DBIndexManager@99:root:Sending id to DB
+INFO:2017-04-08 20:22:01,801:DBBuzzProcessingPool@51:root:Request received
+INFO:2017-04-08 20:22:01,803:DBBuzzProcessingPool@23:root:Processing request
+INFO:2017-04-08 20:22:01,805:DBBuzzProcessingPool@51:root:Request received
+INFO:2017-04-08 20:22:01,806:DBBuzzManager@95:root:Processing request
+INFO:2017-04-08 20:22:01,806:DBIndexManager@99:root:Sending id to DB
+INFO:2017-04-08 20:22:01,809:DBBuzzProcessingPool@23:root:Processing request
+INFO:2017-04-08 20:22:01,809:DBBuzzProcessingPool@51:root:Request received
+INFO:2017-04-08 20:22:01,809:DBBuzzManager@50:root:Retrieving buzz
+INFO:2017-04-08 20:22:01,811:DBBuzzManager@95:root:Processing request
+INFO:2017-04-08 20:22:01,814:DBBuzzProcessingPool@23:root:Processing request
+INFO:2017-04-08 20:22:01,816:DBBuzzManager@50:root:Retrieving buzz
+INFO:2017-04-08 20:22:01,817:DBBuzzProcessingPool@51:root:Request received
+INFO:2017-04-08 20:22:01,821:DBBuzzManager@99:root:Sending to user
+INFO:2017-04-08 20:22:01,822:DBBuzzManager@95:root:Processing request
+INFO:2017-04-08 20:22:01,822:DBBuzzProcessingPool@31:root:Releasing semaphore
+WARNING:2017-04-08 20:22:01,823:connection@1360:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:22:01,824:DBBuzzProcessingPool@23:root:Processing request
+INFO:2017-04-08 20:22:01,826:DBBuzzManager@50:root:Retrieving buzz
+INFO:2017-04-08 20:22:01,829:DBBuzzManager@99:root:Sending to user
+INFO:2017-04-08 20:22:01,833:DBBuzzManager@95:root:Processing request
+INFO:2017-04-08 20:22:01,835:DBBuzzManager@50:root:Retrieving buzz
+INFO:2017-04-08 20:22:01,837:DBBuzzManager@99:root:Sending to user
+WARNING:2017-04-08 20:22:01,871:connection@1360:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:22:01,871:DBBuzzProcessingPool@31:root:Releasing semaphore
+WARNING:2017-04-08 20:22:01,875:connection@1360:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:22:01,877:DBBuzzProcessingPool@31:root:Releasing semaphore
+WARNING:2017-04-08 20:22:01,877:connection@1360:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-08 20:22:01,877:DBBuzzProcessingPool@31:root:Releasing semaphore

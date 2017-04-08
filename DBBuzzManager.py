@@ -1,5 +1,5 @@
 import fcntl
-
+import logging
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 
@@ -14,6 +14,8 @@ class DBBuzzManager:
 
 
     def __init__(self,keyLength):
+        logging.getLogger(self.__class__.__name__)
+        logging.basicConfig(filename="app.log",format='%(levelname)s:%(asctime)s:%(module)s@%(lineno)d:%(message)s', level=logging.INFO)
         self.keyLength = keyLength
 
 
@@ -33,17 +35,25 @@ class DBBuzzManager:
         return ROOT_PATH + "/" + self.getFileKey(uId)
 
     def store(self,buzz):
+        logging.info("Storing buzz")
         filename = self.getFilePath(str(buzz.uId))
-        file = open(filename, 'a+')
+        try:
+            file = open(filename, 'a+')
+        except IOError as e:
+            logging.error("Folder path not configured for user registration")
         fcntl.flock(file,fcntl.LOCK_EX)
         file.write('\n' + self.createInfoEntry(buzz))
         fcntl.flock(file, fcntl.LOCK_UN)
         file.close()
 
     def retrieveBuzz(self, uId):
+        logging.info("Retrieving buzz")
         uId = str(uId)
         filename = self.getFilePath(uId)
-        file = open(filename, 'r')
+        try:
+            file = open(filename, 'r')
+        except IOError as e:
+            logging.warn(e)
         buzz = None
         fcntl.flock(file, fcntl.LOCK_SH)
         for line in file:
@@ -56,9 +66,13 @@ class DBBuzzManager:
         return self.CSVToBuzz(buzz)
 
     def deleteBuzz(self, requestObject):
+        logging.info("Deleting buzz")
         uId = str(requestObject.uId)
         filename = self.getFilePath(uId)
-        file = open(filename, 'r+')
+        try:
+            file = open(filename, 'r+')
+        except IOError as e:
+            logging.error(e)
         fcntl.flock(file, fcntl.LOCK_EX)
         location = 0
         found = False
@@ -81,9 +95,11 @@ class DBBuzzManager:
         return Buzz(args[1],args[2].rstrip(),args[0])
 
     def processRequest(self, requestObject):
+        logging.info("Processing request")
         uId = str(requestObject.tag)
         b = self.retrieveBuzz(uId)
         if(b):
+            logging.info("Sending to user")
             outgoingConnectionManager = ConnectionManager(OUTGOING_CONNECTION_IP, OUTGOING_CONNECTION_PORT)
             outgoingConnectionManager.declareQueue(requestObject.user)
             outgoingConnectionManager.writeToQueue(requestObject.user, b)

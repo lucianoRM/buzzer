@@ -1,12 +1,13 @@
 import fcntl
+import logging
 
-from Buzz import Buzz
 from ConnectionManager import ConnectionManager
-from DBRequest import DBRequest
+from DBRequest import DBRequest, QueryRequest
 
 OUTGOING_QUEUE_IP = 'localhost'
 OUTGOING_QUEUE_PORT = 5672
-OUTGOING_QUEUE_NAME = 'dbaccess-queue'
+OUTGOING_EXCHANGE_NAME = 'buzz-exchange'
+OUTGOING_QUEUE_NAME = 'buzz-queue'
 
 INDEX_PATH = './index'
 
@@ -14,8 +15,9 @@ INDEX_PATH = './index'
 class DBIndexManager:
 
     def __init__(self,keyLength):
+        logging.getLogger(self.__class__.__name__)
+        logging.basicConfig(filename="app.log",format='%(levelname)s:%(asctime)s:%(module)s@%(lineno)d:%(message)s', level=logging.INFO)
         self.keyLength = keyLength
-        self.outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP,OUTGOING_QUEUE_PORT)
 
     def storeIndex(self,buzz):
         username = buzz.user
@@ -41,19 +43,25 @@ class DBIndexManager:
         return -1
 
     def getFileLines(self,filename):
-        file = open(filename,'r')
-        fcntl.flock(file,fcntl.LOCK_SH)
-        lines = file.readlines()
-        fcntl.flock(file,fcntl.LOCK_UN)
-        file.close()
+        try:
+            file = open(filename,'r')
+            fcntl.flock(file,fcntl.LOCK_SH)
+            lines = file.readlines()
+            fcntl.flock(file,fcntl.LOCK_UN)
+            file.close()
+        except Exception as e:
+            logging.warn(e)
         return [line.rstrip() for line in lines]
 
     def writeLines(self,filename,lines):
-        file = open(filename, 'w')
-        fcntl.flock(file, fcntl.LOCK_EX)
-        file.write('\n'.join(lines))
-        fcntl.flock(file, fcntl.LOCK_UN)
-        file.close()
+        try:
+            file = open(filename, 'w')
+            fcntl.flock(file, fcntl.LOCK_EX)
+            file.write('\n'.join(lines))
+            fcntl.flock(file, fcntl.LOCK_UN)
+            file.close()
+        except Exception as e:
+            logging.warn(e)
 
     def updateIndex(self,tag,uId):
         uId = str(uId)
@@ -62,11 +70,10 @@ class DBIndexManager:
         try:
             filelines = self.getFileLines(filename)
         except IOError as e:
-            print e
+            logging.warn(e)
         position = self.getTagPosition(filelines, tag)
         if(position >= 0):
             filelines[position] = filelines[position] + ";" + uId
-            print filelines
         else:
             filelines.append(tag + ";" + uId)
         self.writeLines(filename,filelines)
@@ -85,15 +92,20 @@ class DBIndexManager:
             file.close()
             return [line.rstrip() for line in args[1:]]
         except IOError as e:
-            print e
+            logging.warn(e)
             return []
 
 
     def processRequest(self,request):
+        logging.info("processing " + request.tag)
         ids = self.getIdList(request.tag)
-        print ids
-        #for id in ids:
-         #   self.outgoingConnectionManager.writeToQueue(OUTGOING_QUEUE_NAME,DBRequest(request.user,id))
+        outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP, OUTGOING_QUEUE_PORT)
+        outgoingConnectionManager.declareExchange(OUTGOING_EXCHANGE_NAME)
+        for id in ids:
+            logging.info("Sending id to DB")
+            outgoingConnectionManager.writeToExchange(OUTGOING_EXCHANGE_NAME,id,QueryRequest(request.user,id))
+        outgoingConnectionManager.close()
+
 
 
 

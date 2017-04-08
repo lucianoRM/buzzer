@@ -18,6 +18,12 @@ class ConnectionManager:
             message = MessageUtils.serialize(messageObject)
         self.channel.basic_publish('', queueName, message)
 
+    def writeToExchange(self,exchangeName,key,messageObject):
+        message = messageObject
+        if (not isinstance(messageObject, str)):
+            message = MessageUtils.serialize(messageObject)
+        self.channel.basic_publish(exchange=exchangeName,routing_key=key, body= message)
+
     def listenToQueue(self, queueName, callback):
         self.channel.basic_consume(callback, queueName)
         self.channel.start_consuming()
