@@ -1,13 +1,14 @@
 import fcntl
 
+from Buzz import Buzz
 from ConnectionManager import ConnectionManager
-from Request import Request
+from DBRequest import DBRequest
 
 OUTGOING_QUEUE_IP = 'localhost'
 OUTGOING_QUEUE_PORT = 5672
 OUTGOING_QUEUE_NAME = 'dbaccess-queue'
 
-HASHTAG_INDEX_PATH = './index/hashtags'
+INDEX_PATH = './index'
 
 '''Saves the index to locate users and hashtags in messages'''
 class DBIndexManager:
@@ -16,16 +17,18 @@ class DBIndexManager:
         self.keyLength = keyLength
         self.outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP,OUTGOING_QUEUE_PORT)
 
-    def storeHashtagsIndex(self,buzz):
+    def storeIndex(self,buzz):
+        username = buzz.user
+        self.updateIndex(username,buzz.uId)
         hashtags = buzz.getHashtags()
         for hashtag in hashtags:
-            self.storeHashtagIndex(hashtag,buzz.uId)
+            self.updateIndex(hashtag,buzz.uId)
 
-    def getHashtagFileKey(self,hashtag):
-        if (len(hashtag) < self.keyLength):
-            fileKey = hashtag
+    def getFileKey(self,tag):
+        if (len(tag) < self.keyLength):
+            fileKey = tag
         else:
-            fileKey = hashtag[:self.keyLength]
+            fileKey = tag[:self.keyLength]
         return fileKey
 
     def getTagPosition(self,filelines,tag):
@@ -43,30 +46,33 @@ class DBIndexManager:
         lines = file.readlines()
         fcntl.flock(file,fcntl.LOCK_UN)
         file.close()
-        return lines
+        return [line.rstrip() for line in lines]
 
     def writeLines(self,filename,lines):
         file = open(filename, 'w')
         fcntl.flock(file, fcntl.LOCK_EX)
-        file.writelines(lines)
+        file.write('\n'.join(lines))
         fcntl.flock(file, fcntl.LOCK_UN)
         file.close()
 
-    def storeHashtagIndex(self,hashtag,uId):
-        filename = HASHTAG_INDEX_PATH + "/" + self.getHashtagFileKey(hashtag)
+    def updateIndex(self,tag,uId):
+        uId = str(uId)
+        filename = INDEX_PATH + "/" + self.getFileKey(tag)
+        filelines = []
         try:
             filelines = self.getFileLines(filename)
         except IOError as e:
             print e
-        position = self.getTagPosition(filelines, hashtag)
+        position = self.getTagPosition(filelines, tag)
         if(position >= 0):
             filelines[position] = filelines[position] + ";" + uId
+            print filelines
         else:
-            filelines.append(hashtag + ";" + uId)
+            filelines.append(tag + ";" + uId)
         self.writeLines(filename,filelines)
 
     def getIdList(self,tag):
-        filename = HASHTAG_INDEX_PATH + "/" + self.getHashtagFileKey(tag)
+        filename = INDEX_PATH + "/" + self.getFileKey(tag)
         args = []
         try:
             file = open(filename, 'r')
@@ -77,21 +83,19 @@ class DBIndexManager:
                     break
             fcntl.flock(file,fcntl.LOCK_UN)
             file.close()
-            return args[1:]
+            return [line.rstrip() for line in args[1:]]
         except IOError as e:
             print e
+            return []
 
 
     def processRequest(self,request):
         ids = self.getIdList(request.tag)
-        for id in ids:
-            self.outgoingConnectionManager.writeToQueue(OUTGOING_QUEUE_NAME,Request(request.user,id))
+        print ids
+        #for id in ids:
+         #   self.outgoingConnectionManager.writeToQueue(OUTGOING_QUEUE_NAME,DBRequest(request.user,id))
 
 
 
-
-m = DBIndexManager(5)
-
-m.processRequest(Request('luciano','#luciano'))
 
 

@@ -68,6 +68,9 @@ class DBBuzzManager:
         fcntl.flock(file, fcntl.LOCK_UN)
         file.close()
 
+    def processRequest(self, requestObject):
+        print requestObject
+
 
 
 db = DBBuzzManager(3)
