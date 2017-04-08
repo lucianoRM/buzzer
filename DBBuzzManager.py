@@ -1,8 +1,13 @@
 import fcntl
 
 from Buzz import Buzz
+from ConnectionManager import ConnectionManager
 
 ROOT_PATH = './buzz'
+OUTGOING_CONNECTION_IP = 'localhost'
+OUTGOING_CONNECTION_PORT = 5672
+
+
 
 '''Handles db files and stores information'''
 class DBBuzzManager:
@@ -10,6 +15,7 @@ class DBBuzzManager:
 
     def __init__(self,keyLength):
         self.keyLength = keyLength
+
 
     def createInfoEntry(self,buzz):
         argsList = []
@@ -30,7 +36,7 @@ class DBBuzzManager:
         filename = self.getFilePath(str(buzz.uId))
         file = open(filename, 'a+')
         fcntl.flock(file,fcntl.LOCK_EX)
-        file.write(self.createInfoEntry(buzz))
+        file.write('\n' + self.createInfoEntry(buzz))
         fcntl.flock(file, fcntl.LOCK_UN)
         file.close()
 
@@ -47,10 +53,10 @@ class DBBuzzManager:
                 break
         fcntl.flock(file, fcntl.LOCK_UN)
         file.close()
-        return buzz
+        return self.CSVToBuzz(buzz)
 
-    def deleteBuzz(self, uId):
-        uId = str(uId)
+    def deleteBuzz(self, requestObject):
+        uId = str(requestObject.uId)
         filename = self.getFilePath(uId)
         file = open(filename, 'r+')
         fcntl.flock(file, fcntl.LOCK_EX)
@@ -68,18 +74,26 @@ class DBBuzzManager:
         fcntl.flock(file, fcntl.LOCK_UN)
         file.close()
 
+    def CSVToBuzz(self,csvLine):
+        if(not csvLine):
+            return None
+        args = csvLine.split(";") #id;user;message
+        return Buzz(args[1],args[2].rstrip(),args[0])
+
     def processRequest(self, requestObject):
-        print requestObject
+        uId = str(requestObject.tag)
+        b = self.retrieveBuzz(uId)
+        if(b):
+            outgoingConnectionManager = ConnectionManager(OUTGOING_CONNECTION_IP, OUTGOING_CONNECTION_PORT)
+            outgoingConnectionManager.declareQueue(requestObject.user)
+            outgoingConnectionManager.writeToQueue(requestObject.user, b)
+            outgoingConnectionManager.close()
 
 
 
-db = DBBuzzManager(3)
 
-a = Buzz('luciano', 'Este es el mensaje')
-db.store(a)
-print db.retrieveBuzz(a.uId)
-db.deleteBuzz(a.uId)
-print db.retrieveBuzz(a.uId)
+
+
 
 
 

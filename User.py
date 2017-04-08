@@ -51,6 +51,9 @@ class User:
         petition = ShutdownSystemPetition(self.name)
         self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,petition)
 
+u = User('luciano')
+u.startNotificationThread()
+
 
 
 

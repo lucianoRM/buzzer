@@ -8,7 +8,7 @@ from DBRequest import DBRequest, QueryRequest, DeleteRequest
 from MessageUtils import MessageUtils
 
 POOL_SIZE = 10
-FILE_KEY_LENGHT = 2
+FILE_KEY_LENGHT = 1
 INCOMING_QUEUE_IP = 'localhost'
 INCOMING_QUEUE_PORT = 5672
 EXCHANGE_NAME = 'buzz-exchange'
@@ -29,7 +29,7 @@ class Worker:
 
 
 
-class DBIndexProcessingPool:
+class DBBuzzProcessingPool:
 
     def __init__(self,accessingKey):
         self.accessingKey = accessingKey
@@ -45,6 +45,7 @@ class DBIndexProcessingPool:
         worker = Worker()
         thread = threading.Thread(target=worker.run, args=(self.semaphore,request))
         thread.start()
+        self.incomingConnection.ack(method.delivery_tag)
 
     def start(self):
         self.incomingConnection.listenToQueue(QUEUE_NAME,self.processRequest)
@@ -53,6 +54,6 @@ class DBIndexProcessingPool:
 
 
 
-a = DBIndexProcessingPool("*")
+a = DBBuzzProcessingPool("*")
 a.start()
 
