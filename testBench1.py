@@ -23,10 +23,10 @@ raw_input("Empezar sistema")
 dispatcher = Dispatcher()
 dispatcher.start(v)
 
-index = DBIndexProcessingPool("*")
+index = DBIndexProcessingPool(["*"])
 index.start(v)
 
-db = DBBuzzProcessingPool("*")
+db = DBBuzzProcessingPool(["*"])
 db.start(v)
 
 

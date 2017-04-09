@@ -10,7 +10,10 @@ class ConnectionManager:
         self.connection = pika.BlockingConnection(pika.ConnectionParameters(ip, port))
         self.channel = self.connection.channel()
 
-    def declareQueue(self, queueName):
+    def declareQueue(self, queueName=None):
+        if(not queueName):
+            result = self.channel.queue_declare()
+            return result.method.queue
         self.channel.queue_declare(queueName)
 
     def writeToQueue(self, queueName, messageObject):

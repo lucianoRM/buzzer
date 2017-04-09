@@ -50,8 +50,9 @@ class Dispatcher(GenericListener):
     def handleBuzz(self,buzz):
         logging.info("Processing buzz")
         self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(USER_REGISTRATION_QUEUE_NAME,buzz)
-        self.outgoingBuzzDBConnectionManager.writeToExchange(BUZZ_DB_HANDLER_EXCHANGE_NAME,str(buzz.uId),buzz)
-        self.outgoingIndexConnectionManager.writeToExchange(INDEX_HANDLER_EXCHANGE_NAME,buzz.user,buzz)
+        self.outgoingBuzzDBConnectionManager.writeToExchange(BUZZ_DB_HANDLER_EXCHANGE_NAME,".".join(list(str(buzz.uId))),buzz)
+        print ".".join(list(str(buzz.uId)))
+        self.outgoingIndexConnectionManager.writeToExchange(INDEX_HANDLER_EXCHANGE_NAME,".".join(list(buzz.user)),buzz)
 
     def handleFollowingPetition(self,petition):
         logging.info("Processing following petition")
@@ -85,6 +86,5 @@ class Dispatcher(GenericListener):
     def _start(self):
          self.incomingConnectionManager.addTimeout(self.onTimeout)
          self.incomingConnectionManager.listenToQueue(INCOMING_QUEUE_NAME, self.onMessageReceived)
-
 
 

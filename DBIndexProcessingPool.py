@@ -15,7 +15,7 @@ FILE_KEY_LENGHT = 2
 INCOMING_QUEUE_IP = 'localhost'
 INCOMING_QUEUE_PORT = 5672
 EXCHANGE_NAME = 'index-exchange'
-QUEUE_NAME = 'index-queue'
+
 
 
 class Worker:
@@ -33,13 +33,14 @@ class Worker:
 
 class DBIndexProcessingPool(GenericListener):
 
-    def __init__(self,accessingKey):
+    def __init__(self,accessingKeys):
         GenericListener.__init__(self,INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
-        self.accessingKey = accessingKey
+        self.accessingKeys = accessingKeys
         self.semaphore = threading.Semaphore(POOL_SIZE)
         self.incomingConnectionManager.declareExchange(EXCHANGE_NAME)
-        self.incomingConnectionManager.declareQueue(QUEUE_NAME)
-        self.incomingConnectionManager.bindQueue(EXCHANGE_NAME,QUEUE_NAME,accessingKey)
+        self.queueName = self.incomingConnectionManager.declareQueue()
+        for accessingKey in accessingKeys:
+            self.incomingConnectionManager.bindQueue(EXCHANGE_NAME,self.queueName,accessingKey)
 
     def processRequest(self, ch, method, properties, body):
         request = MessageUtils.deserialize(body)
@@ -52,7 +53,7 @@ class DBIndexProcessingPool(GenericListener):
 
     def _start(self):
         self.incomingConnectionManager.addTimeout(self.onTimeout)
-        self.incomingConnectionManager.listenToQueue(QUEUE_NAME,self.processRequest)
+        self.incomingConnectionManager.listenToQueue(self.queueName,self.processRequest)
 
 
 
