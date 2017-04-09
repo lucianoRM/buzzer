@@ -1,13 +1,19 @@
 import fcntl
+import threading
 
 import time
+
+import signal
 
 from ActionMessage import ShutdownSystemPetition,FollowUserPetition,FollowHashtagPetition
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
+from GenericListener import GenericListener
 from MessageUtils import MessageUtils
 import os
 import logging
+
+from ThreadSafeVariable import ThreadSafeVariable
 
 INCOMING_QUEUE_IP = 'localhost'
 INCOMING_QUEUE_PORT = 5672
@@ -20,14 +26,13 @@ USERS_INFO_FOLDER = './reg/users_info'
 
 
 '''Persists registrations to hashtags and other users'''
-class UserRegistrationHandler:
+class UserRegistrationHandler(GenericListener):
 
 
 
     def __init__(self):
-        logging.getLogger(self.__class__.__name__)
-        logging.basicConfig(filename="app.log",format = '%(levelname)s:%(asctime)s:%(name)s:%(message)s', level = logging.INFO)
-        self.incomingConnectionManager = ConnectionManager(INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
+
+        GenericListener.__init__(self,INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
         self.outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP,OUTGOING_QUEUE_PORT)
         self.incomingConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
         self.initializeUserQueues()
@@ -111,19 +116,15 @@ class UserRegistrationHandler:
         elif(isinstance(message, Buzz)):
             logging.info("processed buzz")
             self.notifyFollowers(message)
-        elif(isinstance(message, ShutdownSystemPetition)):
-            self.incomingConnectionManager.ack(method.delivery_tag)
-            self.terminate()
-            return
         self.incomingConnectionManager.ack(method.delivery_tag)
 
-    def waitForMessages(self):
-        self.incomingConnectionManager.listenToQueue(INCOMING_QUEUE_NAME,self.onMessageReceived)
 
-    def terminate(self):
-        self.incomingConnectionManager.stopListeningToQueue()
-        self.outgoingConnectionManager.close()
-        self.incomingConnectionManager.close()
+
+    def _start(self):
+        self.incomingConnectionManager.addTimeout(self.onTimeout)
+        self.incomingConnectionManager.listenToQueue(INCOMING_QUEUE_NAME, self.onMessageReceived)
+
+
 
 
 

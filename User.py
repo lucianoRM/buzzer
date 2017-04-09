@@ -1,3 +1,9 @@
+import threading
+
+import time
+
+import signal
+
 from ActionMessage import FollowHashtagPetition, FollowUserPetition, ShutdownSystemPetition
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
@@ -28,18 +34,14 @@ class User:
         self.notifier = Notifier(self.name)
         self.connectionManager = ConnectionManager(QUEUE_IP,QUEUE_PORT)
         self.connectionManager.declareQueue(SERVER_QUEUE_NAME)
+        #signal.signal(signal.SIGINT, self.turnNotificationsOff)
 
-    def startNotificationThread(self):
-        self.notifier.startListeningForNotifications()
 
-    def stopNotificationThread(self):
-        self.notifier.stopListeningForNotifications()
-
-    def turnNotificationsOn(self):
-        self.startNotificationThread()
+    def turnNotificationsOn(self,conditionVariable):
+        self.notifier.start(conditionVariable)
 
     def turnNotificationsOff(self):
-        self.stopNotificationThread()
+        self.notifier.stop()
 
     def sendBuzz(self, message):
         buzz = Buzz(self.name, message)
@@ -65,10 +67,6 @@ class User:
         request = DeleteRequest(self.name,uId)
         self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,request)
         logging.info("Sent delete message")
-
-    def sendShutdownPetition(self):
-        petition = ShutdownSystemPetition(self.name)
-        self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,petition)
 
 
 

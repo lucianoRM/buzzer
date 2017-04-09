@@ -672,3 +672,1225 @@ WARNING:2017-04-08 20:22:01,875:connection@1360:pika.connection:Disconnected fro
 INFO:2017-04-08 20:22:01,877:DBBuzzProcessingPool@31:root:Releasing semaphore
 WARNING:2017-04-08 20:22:01,877:connection@1360:pika.connection:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
 INFO:2017-04-08 20:22:01,877:DBBuzzProcessingPool@31:root:Releasing semaphore
+WARNING:2017-04-09 11:11:30,120:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 11:11:30,125:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 11:18:16,959:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 11:18:16,964:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 11:30:36,631:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 11:30:36,635:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 11:30:45,185:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 11:30:45,191:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 11:46:46,947:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:46:46,950:blocking_connection@1099:Created channel=1
+WARNING:2017-04-09 11:46:54,716:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 11:46:54,716:blocking_connection@616:Closing connection (200): Normal shutdown
+INFO:2017-04-09 11:46:54,716:blocking_connection@1330:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 11:46:54,718:channel@422:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 11:46:54,720:connection@731:Closing connection (200): Normal shutdown
+WARNING:2017-04-09 11:46:54,721:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 11:46:54,721:blocking_connection@428:Connection closed; result=BlockingConnection__OnClosedArgs(connection=<pika.adapters.select_connection.SelectConnection object at 0x7f22db0fbb90>, reason_code=200, reason_text='Normal shutdown')
+INFO:2017-04-09 11:48:10,398:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:48:10,400:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 11:48:12,068:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:48:12,071:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 11:49:52,673:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:49:52,676:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 11:50:03,869:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:50:03,871:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 11:51:12,966:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:51:12,969:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 11:52:03,499:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:52:03,502:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 11:52:45,586:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:52:45,589:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 11:53:23,374:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:53:23,376:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 11:54:43,485:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 11:54:43,487:blocking_connection@1099:Created channel=1
+WARNING:2017-04-09 11:54:49,497:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 11:54:49,497:blocking_connection@616:Closing connection (200): Normal shutdown
+INFO:2017-04-09 11:54:49,498:blocking_connection@1330:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 11:54:49,498:channel@422:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 11:54:49,500:connection@731:Closing connection (200): Normal shutdown
+WARNING:2017-04-09 11:54:49,502:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 11:54:49,503:blocking_connection@428:Connection closed; result=BlockingConnection__OnClosedArgs(connection=<pika.adapters.select_connection.SelectConnection object at 0x7f27e8d18ad0>, reason_code=200, reason_text='Normal shutdown')
+WARNING:2017-04-09 11:59:26,279:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 11:59:26,282:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 11:59:40,898:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 11:59:40,905:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 12:00:22,549:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 12:00:22,562:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 12:01:54,044:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 12:01:54,047:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 12:02:19,562:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 12:02:19,566:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 12:02:48,564:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 12:02:48,566:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 12:03:00,850:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 12:03:00,854:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 12:04:37,121:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 12:04:37,125:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 12:04:46,276:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 12:04:46,279:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:07:40,163:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:07:40,167:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:11:12,624:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:11:12,627:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:14:26,177:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:14:26,194:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 16:17:36,939:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 16:17:36,942:blocking_connection@1099:Created channel=1
+INFO:2017-04-09 16:18:03,783:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 16:18:03,785:blocking_connection@1099:Created channel=1
+WARNING:2017-04-09 16:18:12,799:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 16:18:12,799:blocking_connection@616:Closing connection (200): Normal shutdown
+INFO:2017-04-09 16:18:12,799:blocking_connection@1330:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 16:18:12,800:channel@422:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 16:18:12,801:connection@731:Closing connection (200): Normal shutdown
+WARNING:2017-04-09 16:18:12,803:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 16:18:12,803:blocking_connection@428:Connection closed; result=BlockingConnection__OnClosedArgs(connection=<pika.adapters.select_connection.SelectConnection object at 0x7ff11672ead0>, reason_code=200, reason_text='Normal shutdown')
+INFO:2017-04-09 16:18:32,339:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 16:18:32,341:blocking_connection@1099:Created channel=1
+WARNING:2017-04-09 16:18:38,346:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 16:18:38,346:blocking_connection@616:Closing connection (200): Normal shutdown
+INFO:2017-04-09 16:18:38,347:blocking_connection@1330:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 16:18:38,347:channel@422:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 16:18:38,349:connection@731:Closing connection (200): Normal shutdown
+WARNING:2017-04-09 16:18:38,350:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 16:18:38,351:blocking_connection@428:Connection closed; result=BlockingConnection__OnClosedArgs(connection=<pika.adapters.select_connection.SelectConnection object at 0x7f69af4afad0>, reason_code=200, reason_text='Normal shutdown')
+INFO:2017-04-09 16:18:46,539:base_connection@212:Connecting to 127.0.0.1:5672
+INFO:2017-04-09 16:18:46,554:blocking_connection@1099:Created channel=1
+WARNING:2017-04-09 16:18:52,563:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 16:18:52,563:blocking_connection@616:Closing connection (200): Normal shutdown
+INFO:2017-04-09 16:18:52,564:blocking_connection@1330:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 16:18:52,564:channel@422:Channel.close(200, Normal shutdown)
+INFO:2017-04-09 16:18:52,566:connection@731:Closing connection (200): Normal shutdown
+WARNING:2017-04-09 16:18:52,568:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 16:18:52,569:blocking_connection@428:Connection closed; result=BlockingConnection__OnClosedArgs(connection=<pika.adapters.select_connection.SelectConnection object at 0x7f1bd5292ad0>, reason_code=200, reason_text='Normal shutdown')
+WARNING:2017-04-09 16:20:12,869:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:20:12,873:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:23:36,376:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:23:36,381:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:25:07,064:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:25:07,067:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:26:22,107:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:26:22,110:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:29:52,151:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:29:52,154:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:30:07,106:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:30:07,117:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:30:29,593:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:30:29,598:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:33:52,678:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:33:52,681:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:35:03,421:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:35:03,425:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:36:25,780:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:36:25,787:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:36:47,606:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:36:47,613:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:37:29,695:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:37:29,696:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 16:55:55,710:User@65:Sent follow user petition
+INFO:2017-04-09 16:55:55,710:Dispatcher@71:Received message
+INFO:2017-04-09 16:55:55,712:Dispatcher@58:Processing following petition
+INFO:2017-04-09 16:55:55,712:User@65:Sent follow user petition
+INFO:2017-04-09 16:55:55,713:Dispatcher@71:Received message
+INFO:2017-04-09 16:55:55,714:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 16:55:55,714:Dispatcher@58:Processing following petition
+INFO:2017-04-09 16:55:55,715:User@60:Sent follow hashtag petition
+INFO:2017-04-09 16:55:55,716:Dispatcher@71:Received message
+INFO:2017-04-09 16:55:55,716:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 16:55:55,716:Dispatcher@58:Processing following petition
+INFO:2017-04-09 16:55:55,717:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 16:55:58,945:User@54:Sent buzz
+INFO:2017-04-09 16:55:58,946:Dispatcher@71:Received message
+INFO:2017-04-09 16:55:58,947:Dispatcher@52:Processing buzz
+INFO:2017-04-09 16:55:58,949:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 16:55:58,950:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 16:55:58,951:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 16:55:58,951:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 16:55:58,952:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 16:55:58,953:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 16:55:58,954:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 16:56:00,094:User@54:Sent buzz
+INFO:2017-04-09 16:56:00,096:Dispatcher@71:Received message
+INFO:2017-04-09 16:56:00,096:Dispatcher@52:Processing buzz
+INFO:2017-04-09 16:56:00,099:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 16:56:00,100:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 16:56:00,101:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 16:56:00,101:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 16:56:00,101:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 16:56:00,101:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 16:56:00,102:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 16:56:04,717:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:56:04,718:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:56:13,001:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 16:56:52,492:User@65:Sent follow user petition
+INFO:2017-04-09 16:56:52,492:User@65:Sent follow user petition
+INFO:2017-04-09 16:56:52,493:Dispatcher@71:Received message
+INFO:2017-04-09 16:56:52,493:Dispatcher@58:Processing following petition
+INFO:2017-04-09 16:56:52,494:User@60:Sent follow hashtag petition
+INFO:2017-04-09 16:56:52,494:Dispatcher@71:Received message
+INFO:2017-04-09 16:56:52,494:Dispatcher@58:Processing following petition
+INFO:2017-04-09 16:56:52,495:Dispatcher@71:Received message
+INFO:2017-04-09 16:56:52,495:Dispatcher@58:Processing following petition
+INFO:2017-04-09 16:56:52,495:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 16:56:52,496:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 16:56:52,496:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 16:56:53,974:User@54:Sent buzz
+INFO:2017-04-09 16:56:53,976:Dispatcher@71:Received message
+INFO:2017-04-09 16:56:53,977:Dispatcher@52:Processing buzz
+INFO:2017-04-09 16:56:53,979:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 16:56:53,982:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 16:56:53,983:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 16:56:53,983:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 16:56:53,983:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 16:56:53,984:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 16:56:53,984:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 16:57:01,497:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 16:57:01,500:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 16:57:03,837:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:00:28,629:User@65:Sent follow user petition
+INFO:2017-04-09 17:00:28,630:Dispatcher@71:Received message
+INFO:2017-04-09 17:00:28,630:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:00:28,631:User@65:Sent follow user petition
+INFO:2017-04-09 17:00:28,631:Dispatcher@71:Received message
+INFO:2017-04-09 17:00:28,631:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:00:28,632:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:00:28,632:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:00:28,633:User@60:Sent follow hashtag petition
+INFO:2017-04-09 17:00:28,633:Dispatcher@71:Received message
+INFO:2017-04-09 17:00:28,633:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:00:28,634:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:00:29,529:User@54:Sent buzz
+INFO:2017-04-09 17:00:29,531:Dispatcher@71:Received message
+INFO:2017-04-09 17:00:29,531:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:00:29,534:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:00:29,541:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:00:29,542:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:00:29,545:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:00:29,546:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:00:29,549:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:00:29,551:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:00:32,210:User@54:Sent buzz
+INFO:2017-04-09 17:00:32,211:Dispatcher@71:Received message
+INFO:2017-04-09 17:00:32,212:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:00:32,215:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:00:32,216:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:00:32,216:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:00:32,216:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:00:32,217:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:00:32,217:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:00:32,217:DBIndexProcessingPool@23:Worker started
+WARNING:2017-04-09 17:00:34,635:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:00:34,638:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:02,865:User@54:Sent buzz
+INFO:2017-04-09 17:01:02,867:Dispatcher@71:Received message
+INFO:2017-04-09 17:01:02,867:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:01:02,870:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:01:02,872:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:01:02,872:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:02,872:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:02,873:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:01:02,873:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:01:02,874:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:01:04,693:User@54:Sent buzz
+INFO:2017-04-09 17:01:04,693:Dispatcher@71:Received message
+INFO:2017-04-09 17:01:04,693:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:01:04,695:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:01:04,695:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:04,695:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:04,696:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:01:04,696:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:01:04,696:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:01:04,696:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:01:06,448:Dispatcher@71:Received message
+INFO:2017-04-09 17:01:06,449:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:01:06,451:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:01:06,451:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:01:06,451:DBIndexManager@100:processing user2
+INFO:2017-04-09 17:01:06,454:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:06,455:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:06,455:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:06,455:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:06,455:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:06,456:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:06,456:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:06,456:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:06,457:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:06,457:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:06,457:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:01:06,456:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:06,457:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:06,459:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:06,457:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:06,459:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:06,459:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:06,460:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:06,460:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:01:06,460:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:06,461:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:06,461:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:06,461:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:06,462:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:06,462:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:01:06,462:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:06,463:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:06,463:DBBuzzProcessingPool@26:Processing request
+WARNING:2017-04-09 17:01:06,463:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:01:06,464:DBBuzzProcessingPool@52:Request received
+WARNING:2017-04-09 17:01:06,464:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:01:06,465:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:06,466:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:06,467:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:06,467:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:01:06,468:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:01:06,468:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:06,469:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:06,469:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:06,469:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:06,470:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:01:06,471:DBBuzzManager@50:Retrieving buzz
+WARNING:2017-04-09 17:01:06,471:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:01:06,473:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:01:06,474:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:06,475:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:01:06,476:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:06,478:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:01:06,479:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:01:06,481:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:06,483:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:06,483:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:01:06,482:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:01:06,484:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:06,498:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:06,498:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:06,500:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:01:06,501:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:01:06,503:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:06,503:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:06,504:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:06,504:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:01:08,368:User@74:Sent delete message
+INFO:2017-04-09 17:01:08,369:Dispatcher@71:Received message
+INFO:2017-04-09 17:01:08,370:Dispatcher@66:Processing delete request
+INFO:2017-04-09 17:01:08,372:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:08,375:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:08,375:DBBuzzManager@69:Deleting buzz
+INFO:2017-04-09 17:01:08,375:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:01:10,082:Dispatcher@71:Received message
+INFO:2017-04-09 17:01:10,083:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:01:10,085:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:01:10,085:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:01:10,086:DBIndexManager@100:processing user2
+INFO:2017-04-09 17:01:10,089:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:10,089:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:10,089:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:10,089:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:10,090:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:10,090:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:10,091:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:10,090:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:10,091:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:10,091:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:10,091:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:10,091:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:10,092:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:10,092:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:10,093:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:10,093:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:10,093:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:10,093:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:10,094:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:10,094:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:01:10,094:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:01:10,095:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:10,095:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:10,095:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:10,095:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:10,095:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:10,096:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:01:10,096:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:10,096:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:10,096:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:01:10,096:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:10,097:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:10,097:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:01:10,097:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:10,097:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:01:10,094:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:01:10,103:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:01:10,104:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:01:10,105:DBBuzzProcessingPool@52:Request received
+WARNING:2017-04-09 17:01:10,108:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:01:10,112:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:01:10,112:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:01:10,113:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:01:10,113:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:01:10,114:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:10,127:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:01:10,128:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:10,128:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:10,130:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:01:10,130:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:01:10,132:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:10,133:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:10,133:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:01:10,133:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:10,134:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:10,134:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:01:10,134:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:01:10,145:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:01:10,146:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:02:19,804:User@65:Sent follow user petition
+INFO:2017-04-09 17:02:19,804:User@65:Sent follow user petition
+INFO:2017-04-09 17:02:19,805:Dispatcher@71:Received message
+INFO:2017-04-09 17:02:19,806:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:02:19,806:Dispatcher@71:Received message
+INFO:2017-04-09 17:02:19,806:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:02:19,807:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:02:19,808:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:02:19,808:User@60:Sent follow hashtag petition
+INFO:2017-04-09 17:02:19,808:Dispatcher@71:Received message
+INFO:2017-04-09 17:02:19,808:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:02:19,809:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:02:19,877:User@54:Sent buzz
+INFO:2017-04-09 17:02:19,878:Dispatcher@71:Received message
+INFO:2017-04-09 17:02:19,879:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:02:19,881:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:02:19,885:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:19,886:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:19,887:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:02:19,889:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:02:19,891:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:02:19,893:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:02:22,808:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:02:22,812:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:02:30,699:User@54:Sent buzz
+INFO:2017-04-09 17:02:30,701:Dispatcher@71:Received message
+INFO:2017-04-09 17:02:30,701:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:02:30,704:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:02:30,707:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:30,708:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:30,710:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:02:30,710:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:02:30,711:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:02:30,713:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:02:32,621:User@54:Sent buzz
+INFO:2017-04-09 17:02:32,623:Dispatcher@71:Received message
+INFO:2017-04-09 17:02:32,623:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:02:32,628:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:02:32,629:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:02:32,629:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:32,629:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:32,630:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:02:32,630:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:02:32,631:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:02:34,780:User@54:Sent buzz
+INFO:2017-04-09 17:02:34,781:Dispatcher@71:Received message
+INFO:2017-04-09 17:02:34,782:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:02:34,786:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:34,787:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:02:34,787:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:02:34,787:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:02:34,787:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:34,788:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:02:34,788:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:02:36,167:Dispatcher@71:Received message
+INFO:2017-04-09 17:02:36,167:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:02:36,168:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:02:36,168:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:02:36,169:DBIndexManager@100:processing user2
+INFO:2017-04-09 17:02:36,173:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:02:36,174:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:02:36,174:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:02:36,175:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:36,175:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:02:36,176:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:36,177:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:36,177:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:36,177:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:36,178:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:02:36,178:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:02:36,178:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:02:36,178:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:02:36,179:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:02:36,179:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:02:36,179:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:02:36,180:DBIndexManager@105:Sending id to DB
+WARNING:2017-04-09 17:02:36,180:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:02:36,180:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:36,177:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:02:36,180:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:02:36,180:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:02:36,181:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:02:36,181:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:02:36,181:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:02:36,182:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:36,183:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:36,183:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:36,184:DBBuzzManager@98:Processing request
+WARNING:2017-04-09 17:02:36,185:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:02:36,185:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:36,188:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:02:36,186:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:36,185:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:02:36,188:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:02:36,189:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:36,190:DBBuzzProcessingPool@52:Request received
+WARNING:2017-04-09 17:02:36,190:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:02:36,190:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:02:36,191:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:02:36,191:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:02:36,191:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:02:36,192:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:36,192:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:36,193:DBBuzzManager@50:Retrieving buzz
+WARNING:2017-04-09 17:02:36,195:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:02:36,195:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:02:36,195:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:02:36,196:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:02:36,197:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:02:36,197:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:02:36,197:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:02:36,197:DBBuzzManager@98:Processing request
+WARNING:2017-04-09 17:02:36,200:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:02:36,202:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:02:36,202:DBBuzzProcessingPool@26:Processing request
+WARNING:2017-04-09 17:02:36,202:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:02:36,203:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:02:36,203:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:02:36,204:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:02:36,204:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:02:36,205:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:02:36,205:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:02:36,205:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:02:36,216:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:02:36,216:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:02:36,217:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:02:36,217:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:02:36,216:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:02:36,220:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:02:36,220:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:02:36,222:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:02:36,222:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:02:36,223:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:02:36,224:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:02:36,226:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:02:36,226:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:02:39,271:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:09:03,839:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:09:03,852:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:09:03,853:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:09:03,856:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:11:58,947:User@60:Sent follow user petition
+INFO:2017-04-09 17:11:58,947:Dispatcher@71:Received message
+INFO:2017-04-09 17:11:58,948:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:11:58,948:User@60:Sent follow user petition
+INFO:2017-04-09 17:11:58,949:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:11:58,949:Dispatcher@71:Received message
+INFO:2017-04-09 17:11:58,950:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:11:58,950:Dispatcher@71:Received message
+INFO:2017-04-09 17:11:58,951:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:11:58,950:User@55:Sent follow hashtag petition
+INFO:2017-04-09 17:11:58,951:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:11:58,952:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:11:59,897:User@49:Sent buzz
+INFO:2017-04-09 17:11:59,898:Dispatcher@71:Received message
+INFO:2017-04-09 17:11:59,899:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:11:59,902:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:11:59,903:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:11:59,904:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:11:59,904:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:11:59,905:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:11:59,905:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:11:59,905:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:04,314:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:04,319:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:04,321:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:04,329:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:04,330:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:04,331:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:04,340:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:04,341:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:04,941:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:04,944:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:04,947:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:04,949:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:04,949:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:04,950:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:36,506:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:36,509:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:36,519:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:36,520:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:36,521:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:36,522:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:36,525:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:36,526:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:52,654:User@60:Sent follow user petition
+INFO:2017-04-09 17:12:52,654:User@60:Sent follow user petition
+INFO:2017-04-09 17:12:52,655:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:52,655:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:12:52,656:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:12:52,656:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:52,656:User@55:Sent follow hashtag petition
+INFO:2017-04-09 17:12:52,657:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:12:52,657:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:52,658:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:12:52,658:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:12:52,658:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:12:52,729:User@49:Sent buzz
+INFO:2017-04-09 17:12:52,731:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:52,731:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:12:52,734:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:12:52,736:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:52,740:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:12:52,741:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:12:52,741:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:52,742:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:12:52,742:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:53,732:User@49:Sent buzz
+INFO:2017-04-09 17:12:53,733:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:53,734:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:12:53,736:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:12:53,738:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:53,739:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:53,740:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:12:53,743:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:12:53,743:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:53,743:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:12:54,735:User@49:Sent buzz
+INFO:2017-04-09 17:12:54,736:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:54,737:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:12:54,741:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:12:54,741:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:12:54,742:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:12:54,742:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:54,742:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:54,743:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:12:54,744:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:55,737:User@49:Sent buzz
+INFO:2017-04-09 17:12:55,739:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:55,739:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:12:55,741:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:12:55,743:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:55,743:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:55,744:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:12:55,744:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:12:55,744:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:12:55,745:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:56,741:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:56,742:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:12:56,744:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:12:56,745:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:12:56,745:DBIndexManager@100:processing user2
+INFO:2017-04-09 17:12:56,755:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,756:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,757:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,758:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,759:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,761:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,761:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,762:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,763:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,763:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,763:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:56,764:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,765:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,768:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,768:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,768:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,769:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:56,769:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,769:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,770:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:56,771:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,772:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,772:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,773:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:56,777:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:56,774:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:56,775:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:56,777:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,775:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,779:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,780:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:56,780:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,780:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,781:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,781:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:56,781:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,782:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,782:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,782:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:56,782:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:56,783:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,784:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:56,784:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:56,784:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,785:DBBuzzManager@50:Retrieving buzz
+WARNING:2017-04-09 17:12:56,785:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:12:56,786:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:56,790:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,794:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,795:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,797:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,797:DBBuzzProcessingPool@52:Request received
+WARNING:2017-04-09 17:12:56,798:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:56,799:DBBuzzProcessingPool@26:Processing request
+WARNING:2017-04-09 17:12:56,799:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:12:56,800:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:56,800:DBBuzzManager@98:Processing request
+WARNING:2017-04-09 17:12:56,802:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:56,805:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:56,800:DBBuzzManager@98:Processing request
+WARNING:2017-04-09 17:12:56,805:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:12:56,805:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,808:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:56,805:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:56,805:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:56,806:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:56,805:DBBuzzManager@50:Retrieving buzz
+WARNING:2017-04-09 17:12:56,808:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:56,808:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:56,808:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:56,810:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:56,811:DBBuzzManager@50:Retrieving buzz
+WARNING:2017-04-09 17:12:56,810:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:12:56,810:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:56,810:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:56,810:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:56,810:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:56,810:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:12:56,813:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:56,813:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:12:56,814:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:56,815:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:56,816:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:56,823:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:56,826:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:56,830:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:56,831:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:56,831:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:56,831:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:56,831:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:12:56,832:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:56,832:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:56,833:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:56,833:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:56,833:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:57,742:User@69:Sent delete message
+INFO:2017-04-09 17:12:57,743:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:57,744:Dispatcher@66:Processing delete request
+INFO:2017-04-09 17:12:57,746:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:57,747:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:57,747:DBBuzzManager@69:Deleting buzz
+INFO:2017-04-09 17:12:57,748:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:58,745:Dispatcher@71:Received message
+INFO:2017-04-09 17:12:58,746:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:12:58,748:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:12:58,749:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:12:58,749:DBIndexManager@100:processing user2
+INFO:2017-04-09 17:12:58,753:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,753:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,753:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,753:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,754:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,754:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,755:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,755:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,755:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,755:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:58,755:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,756:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,756:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,756:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,757:DBIndexManager@105:Sending id to DB
+INFO:2017-04-09 17:12:58,757:DBIndexManager@105:Sending id to DB
+WARNING:2017-04-09 17:12:58,757:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:12:58,755:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,761:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,761:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,761:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,761:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:58,763:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,765:DBBuzzProcessingPool@26:Processing request
+WARNING:2017-04-09 17:12:58,765:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:58,766:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,766:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,767:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,766:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,767:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,768:DBBuzzManager@98:Processing request
+WARNING:2017-04-09 17:12:58,768:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:12:58,768:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,769:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,769:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,769:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:58,770:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,770:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,772:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,771:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:58,771:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,771:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,772:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,770:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,774:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,774:DBBuzzProcessingPool@26:Processing request
+WARNING:2017-04-09 17:12:58,774:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:58,774:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,774:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,774:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,775:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:58,775:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:58,775:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,775:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,775:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,776:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:58,776:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:58,776:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,776:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,777:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,777:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,777:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:12:58,777:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:58,777:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,778:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,778:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:12:58,778:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:58,778:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:12:58,779:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:12:58,779:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:12:58,779:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:58,794:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:58,798:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:58,799:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:58,801:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:58,804:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:58,807:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:58,807:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:58,807:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:58,808:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:58,808:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:58,808:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:58,808:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:58,809:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:58,809:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:58,819:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:58,819:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:12:58,820:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:12:58,823:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:12:58,823:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:12:58,823:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:12:58,823:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:13:19,532:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:13:19,535:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:13:19,538:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:13:19,538:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:13:19,539:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:13:19,539:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:13:19,545:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:13:19,546:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:13:19,636:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:13:19,649:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:13:19,659:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:13:19,661:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:13:19,679:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:13:19,682:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:14:59,950:Dispatcher@71:Received message
+INFO:2017-04-09 17:14:59,953:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:14:59,949:User@60:Sent follow user petition
+INFO:2017-04-09 17:14:59,955:User@60:Sent follow user petition
+INFO:2017-04-09 17:14:59,958:User@55:Sent follow hashtag petition
+INFO:2017-04-09 17:14:59,959:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:14:59,963:Dispatcher@71:Received message
+INFO:2017-04-09 17:14:59,963:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:14:59,964:Dispatcher@71:Received message
+INFO:2017-04-09 17:14:59,964:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:14:59,965:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:14:59,966:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:15:00,940:User@49:Sent buzz
+INFO:2017-04-09 17:15:00,942:Dispatcher@71:Received message
+INFO:2017-04-09 17:15:00,943:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:15:00,947:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:15:00,959:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:15:00,965:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:15:00,967:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:15:00,969:DBBuzzProcessingPool@26:Processing request
+WARNING:2017-04-09 17:15:00,973:DBIndexManager@53:[Errno 2] No such file or directory: './index/us'
+INFO:2017-04-09 17:15:00,975:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:15:00,976:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:16:04,923:User@60:Sent follow user petition
+INFO:2017-04-09 17:16:04,925:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:04,925:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:16:04,925:User@60:Sent follow user petition
+INFO:2017-04-09 17:16:04,926:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:04,926:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:16:04,927:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:16:04,927:User@55:Sent follow hashtag petition
+INFO:2017-04-09 17:16:04,927:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:04,928:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:16:04,928:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:16:04,929:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:16:05,955:User@49:Sent buzz
+INFO:2017-04-09 17:16:05,957:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:05,958:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:16:05,960:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:16:05,965:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:16:05,966:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:05,966:DBIndexProcessingPool@23:Worker started
+WARNING:2017-04-09 17:16:05,967:DBIndexManager@54:[Errno 2] No such file or directory: './index/us'
+INFO:2017-04-09 17:16:05,968:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:05,969:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:16:05,969:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:16:09,980:User@49:Sent buzz
+INFO:2017-04-09 17:16:09,982:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:09,982:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:16:09,990:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:09,993:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:16:09,993:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:09,995:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:16:09,995:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:16:09,997:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:16:09,998:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:16:13,561:User@49:Sent buzz
+INFO:2017-04-09 17:16:13,563:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:13,564:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:16:13,566:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:16:13,567:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:13,567:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:13,568:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:16:13,568:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:16:13,569:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:16:13,569:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:16:13,569:DBIndexManager@54:[Errno 2] No such file or directory: './index/#h'
+INFO:2017-04-09 17:16:16,039:User@49:Sent buzz
+INFO:2017-04-09 17:16:16,040:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:16,041:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:16:16,044:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:16:16,047:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:16,048:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:16,049:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:16:16,050:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:16:16,060:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:16:16,061:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:16:18,057:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:18,057:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:16:18,059:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:16:18,060:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:16:18,060:DBIndexManager@101:processing user2
+INFO:2017-04-09 17:16:18,081:DBIndexManager@106:Sending id to DB
+INFO:2017-04-09 17:16:18,082:DBIndexManager@106:Sending id to DB
+WARNING:2017-04-09 17:16:18,082:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:16:18,083:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:18,085:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:18,086:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:16:18,086:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:16:18,087:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:18,088:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:18,088:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:16:18,088:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:16:18,088:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:16:18,089:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:16:18,099:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:18,103:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:18,104:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:18,105:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:16:18,105:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:16:18,105:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:16:18,106:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:16:22,605:User@69:Sent delete message
+INFO:2017-04-09 17:16:22,607:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:22,607:Dispatcher@66:Processing delete request
+INFO:2017-04-09 17:16:22,610:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:22,610:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:22,611:DBBuzzManager@69:Deleting buzz
+INFO:2017-04-09 17:16:22,611:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:16:24,858:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:24,858:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:16:24,861:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:16:24,862:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:16:24,862:DBIndexManager@101:processing user2
+INFO:2017-04-09 17:16:24,874:DBIndexManager@106:Sending id to DB
+INFO:2017-04-09 17:16:24,875:DBIndexManager@106:Sending id to DB
+WARNING:2017-04-09 17:16:24,876:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:16:24,888:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:24,889:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:24,890:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:24,891:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:16:24,891:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:16:24,891:DBBuzzProcessingPool@26:Processing request
+WARNING:2017-04-09 17:16:24,892:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:16:24,892:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:16:24,892:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:16:24,893:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:16:24,893:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:16:24,898:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:24,900:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:16:24,901:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:16:27,824:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:27,828:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:27,831:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:27,834:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:27,839:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:27,840:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:27,842:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:27,846:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:28,911:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:28,922:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:28,931:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:28,936:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:28,946:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:28,952:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:16:41,970:User@60:Sent follow user petition
+INFO:2017-04-09 17:16:41,971:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:41,971:User@60:Sent follow user petition
+INFO:2017-04-09 17:16:41,972:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:16:41,972:User@55:Sent follow hashtag petition
+INFO:2017-04-09 17:16:41,974:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:41,974:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:16:41,974:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:16:41,975:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:41,975:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:16:41,975:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:16:41,976:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:16:42,399:User@49:Sent buzz
+INFO:2017-04-09 17:16:42,400:Dispatcher@71:Received message
+INFO:2017-04-09 17:16:42,401:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:16:42,405:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:16:42,410:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:16:42,410:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:16:42,412:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:16:42,414:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:16:42,414:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:16:42,415:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:16:50,959:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:50,964:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:50,969:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:50,970:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:50,974:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:50,975:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:53,594:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:53,596:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:53,601:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:53,602:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:53,615:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:53,619:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:16:53,620:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:16:53,624:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:18:21,257:User@60:Sent follow user petition
+INFO:2017-04-09 17:18:21,258:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:21,258:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:18:21,259:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:18:21,259:User@60:Sent follow user petition
+INFO:2017-04-09 17:18:21,260:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:21,260:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:18:21,261:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:18:21,261:User@55:Sent follow hashtag petition
+INFO:2017-04-09 17:18:21,261:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:21,261:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:18:21,262:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:18:21,311:User@49:Sent buzz
+INFO:2017-04-09 17:18:21,312:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:21,312:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:18:21,314:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:18:21,314:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:18:21,315:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:18:21,318:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:18:21,318:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:18:21,318:DBBuzzManager@38:Storing buzz
+WARNING:2017-04-09 17:18:21,319:DBIndexManager@54:[Errno 2] No such file or directory: './index/us'
+INFO:2017-04-09 17:18:21,319:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:18:22,314:User@49:Sent buzz
+INFO:2017-04-09 17:18:22,317:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:22,318:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:18:22,323:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:18:22,324:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:18:22,325:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:18:22,326:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:18:22,328:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:18:22,328:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:18:22,328:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:18:24,101:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:24,107:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:24,113:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:24,115:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:24,117:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:24,122:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:24,125:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:24,125:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:24,215:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:24,218:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:24,243:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:24,246:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:24,259:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:24,262:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:18:40,780:User@60:Sent follow user petition
+INFO:2017-04-09 17:18:40,781:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:40,781:User@60:Sent follow user petition
+INFO:2017-04-09 17:18:40,782:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:18:40,782:User@55:Sent follow hashtag petition
+INFO:2017-04-09 17:18:40,783:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:40,783:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:18:40,783:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:40,784:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:18:40,783:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:18:40,784:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:18:40,785:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:18:41,657:User@49:Sent buzz
+INFO:2017-04-09 17:18:41,658:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:41,658:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:18:41,662:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:18:41,670:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:18:41,671:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:18:41,674:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:18:41,674:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:18:41,675:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:18:41,677:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:18:44,985:User@49:Sent buzz
+INFO:2017-04-09 17:18:44,990:Dispatcher@71:Received message
+INFO:2017-04-09 17:18:44,991:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:18:44,994:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:18:45,000:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:18:45,001:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:18:45,002:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:18:45,003:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:18:45,004:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:18:45,004:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:18:51,762:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:51,766:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:51,775:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:51,781:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:51,790:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:51,794:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:51,822:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:51,826:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:52,774:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:52,778:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:52,782:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:52,789:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:18:52,791:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:18:52,795:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:19:53,240:User@60:Sent follow user petition
+INFO:2017-04-09 17:19:53,241:Dispatcher@71:Received message
+INFO:2017-04-09 17:19:53,242:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:19:53,243:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:19:53,244:User@60:Sent follow user petition
+INFO:2017-04-09 17:19:53,245:Dispatcher@71:Received message
+INFO:2017-04-09 17:19:53,245:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:19:53,247:UserRegistrationHandler@111:processing follow user petition
+INFO:2017-04-09 17:19:53,247:User@55:Sent follow hashtag petition
+INFO:2017-04-09 17:19:53,248:Dispatcher@71:Received message
+INFO:2017-04-09 17:19:53,248:Dispatcher@58:Processing following petition
+INFO:2017-04-09 17:19:53,249:UserRegistrationHandler@114:processing follow hashtag petition
+INFO:2017-04-09 17:19:54,580:User@49:Sent buzz
+INFO:2017-04-09 17:19:54,581:Dispatcher@71:Received message
+INFO:2017-04-09 17:19:54,582:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:19:54,586:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:19:54,591:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:19:54,593:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:19:54,598:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:19:54,600:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:19:54,616:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:19:54,617:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:19:54,618:DBIndexManager@54:[Errno 2] No such file or directory: './index/us'
+INFO:2017-04-09 17:19:59,191:User@49:Sent buzz
+INFO:2017-04-09 17:19:59,193:Dispatcher@71:Received message
+INFO:2017-04-09 17:19:59,194:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:19:59,198:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:19:59,201:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:19:59,203:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:19:59,204:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:19:59,205:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:19:59,206:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:19:59,206:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:20:02,596:User@49:Sent buzz
+INFO:2017-04-09 17:20:02,598:Dispatcher@71:Received message
+INFO:2017-04-09 17:20:02,599:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:20:02,605:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:20:02,607:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:20:02,608:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:20:02,610:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:20:02,611:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:20:02,611:DBBuzzManager@38:Storing buzz
+WARNING:2017-04-09 17:20:02,616:DBIndexManager@54:[Errno 2] No such file or directory: './index/#h'
+INFO:2017-04-09 17:20:02,619:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:20:06,591:User@49:Sent buzz
+INFO:2017-04-09 17:20:06,593:Dispatcher@71:Received message
+INFO:2017-04-09 17:20:06,594:Dispatcher@52:Processing buzz
+INFO:2017-04-09 17:20:06,600:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:20:06,601:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:20:06,602:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:20:06,604:UserRegistrationHandler@117:processed buzz
+INFO:2017-04-09 17:20:06,605:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:20:06,607:DBBuzzManager@38:Storing buzz
+INFO:2017-04-09 17:20:06,608:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:20:09,657:Dispatcher@71:Received message
+INFO:2017-04-09 17:20:09,658:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:20:09,660:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:20:09,661:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:20:09,661:DBIndexManager@101:processing user2
+INFO:2017-04-09 17:20:09,676:DBIndexManager@106:Sending id to DB
+INFO:2017-04-09 17:20:09,677:DBIndexManager@106:Sending id to DB
+INFO:2017-04-09 17:20:09,679:DBBuzzProcessingPool@52:Request received
+WARNING:2017-04-09 17:20:09,679:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:20:09,682:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:20:09,685:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:20:09,688:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:20:09,689:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:20:09,689:DBBuzzManager@102:Sending to user
+INFO:2017-04-09 17:20:09,689:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:20:09,691:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:20:09,692:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:20:09,692:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:20:09,690:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:20:09,707:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:09,711:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:09,722:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:20:09,723:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:20:09,725:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:20:09,726:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:20:23,299:User@69:Sent delete message
+INFO:2017-04-09 17:20:23,301:Dispatcher@71:Received message
+INFO:2017-04-09 17:20:23,302:Dispatcher@66:Processing delete request
+INFO:2017-04-09 17:20:23,304:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:20:23,305:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:20:23,306:DBBuzzManager@69:Deleting buzz
+INFO:2017-04-09 17:20:23,306:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:20:26,198:Dispatcher@71:Received message
+INFO:2017-04-09 17:20:26,198:Dispatcher@62:Processing query request 
+INFO:2017-04-09 17:20:26,201:DBIndexProcessingPool@46:Processing request
+INFO:2017-04-09 17:20:26,201:DBIndexProcessingPool@23:Worker started
+INFO:2017-04-09 17:20:26,202:DBIndexManager@101:processing user2
+INFO:2017-04-09 17:20:26,223:DBIndexManager@106:Sending id to DB
+INFO:2017-04-09 17:20:26,224:DBIndexManager@106:Sending id to DB
+INFO:2017-04-09 17:20:26,226:DBBuzzProcessingPool@52:Request received
+WARNING:2017-04-09 17:20:26,227:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+INFO:2017-04-09 17:20:26,227:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:20:26,229:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:20:26,230:DBBuzzProcessingPool@52:Request received
+INFO:2017-04-09 17:20:26,231:DBBuzzManager@50:Retrieving buzz
+WARNING:2017-04-09 17:20:26,232:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:20:26,233:DBBuzzProcessingPool@26:Processing request
+INFO:2017-04-09 17:20:26,234:DBBuzzManager@98:Processing request
+INFO:2017-04-09 17:20:26,234:DBBuzzManager@50:Retrieving buzz
+INFO:2017-04-09 17:20:26,234:DBBuzzProcessingPool@34:Releasing semaphore
+INFO:2017-04-09 17:20:26,234:DBBuzzManager@102:Sending to user
+WARNING:2017-04-09 17:20:26,241:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:26,243:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+INFO:2017-04-09 17:20:26,243:DBBuzzProcessingPool@34:Releasing semaphore
+WARNING:2017-04-09 17:20:31,095:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:31,097:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:31,106:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:20:31,107:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:20:31,113:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:31,119:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:31,123:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:20:31,127:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:20:32,195:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:32,207:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:20:32,241:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:32,245:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown
+WARNING:2017-04-09 17:20:32,267:blocking_connection@1844:cancel: queue consumer generator is inactive (already cancelled by client or broker?)
+WARNING:2017-04-09 17:20:32,270:connection@1360:Disconnected from RabbitMQ at localhost:5672 (200): Normal shutdown

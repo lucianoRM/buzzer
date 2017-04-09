@@ -1,6 +1,8 @@
 import threading
 import logging
 
+from GenericListener import GenericListener
+
 logging.getLogger("pika").setLevel(logging.WARNING)
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
@@ -29,17 +31,15 @@ class Worker:
 
 
 
-class DBIndexProcessingPool:
+class DBIndexProcessingPool(GenericListener):
 
     def __init__(self,accessingKey):
-        logging.getLogger(self.__class__.__name__)
-        logging.basicConfig(filename="app.log",format='%(levelname)s:%(asctime)s:%(module)s@%(lineno)d:%(message)s', level=logging.INFO)
+        GenericListener.__init__(self,INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
         self.accessingKey = accessingKey
         self.semaphore = threading.Semaphore(POOL_SIZE)
-        self.incomingConnection = ConnectionManager(INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
-        self.incomingConnection.declareExchange(EXCHANGE_NAME)
-        self.incomingConnection.declareQueue(QUEUE_NAME)
-        self.incomingConnection.bindQueue(EXCHANGE_NAME,QUEUE_NAME,accessingKey)
+        self.incomingConnectionManager.declareExchange(EXCHANGE_NAME)
+        self.incomingConnectionManager.declareQueue(QUEUE_NAME)
+        self.incomingConnectionManager.bindQueue(EXCHANGE_NAME,QUEUE_NAME,accessingKey)
 
     def processRequest(self, ch, method, properties, body):
         request = MessageUtils.deserialize(body)
@@ -48,10 +48,11 @@ class DBIndexProcessingPool:
         worker = Worker()
         thread = threading.Thread(target=worker.run, args=(self.semaphore,request))
         thread.start()
-        self.incomingConnection.ack(method.delivery_tag)
+        self.incomingConnectionManager.ack(method.delivery_tag)
 
-    def start(self):
-        self.incomingConnection.listenToQueue(QUEUE_NAME,self.processRequest)
+    def _start(self):
+        self.incomingConnectionManager.addTimeout(self.onTimeout)
+        self.incomingConnectionManager.listenToQueue(QUEUE_NAME,self.processRequest)
 
 
 

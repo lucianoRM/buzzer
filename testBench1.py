@@ -2,38 +2,44 @@ import threading
 import logging
 import time
 
-
+import signal
 
 from DBBuzzProcessingPool import DBBuzzProcessingPool
 from DBIndexProcessingPool import DBIndexProcessingPool
 from Dispatcher import Dispatcher
+from ThreadSafeVariable import ThreadSafeVariable
 from User import User
 from UserRegistrationHandler import UserRegistrationHandler
 
+v = ThreadSafeVariable(True)
+
+def stop(signal,frame):
+    v.set(False)
+    exit(0)
+
+signal.signal(signal.SIGINT,stop)
+
 raw_input("Empezar sistema")
 dispatcher = Dispatcher()
-dispatcherThread = threading.Thread(target=dispatcher.start)
-dispatcherThread.start()
+dispatcher.start(v)
 
 index = DBIndexProcessingPool("*")
-indexThread = threading.Thread(target=index.start)
-indexThread.start()
+index.start(v)
 
 db = DBBuzzProcessingPool("*")
-dbThread = threading.Thread(target=db.start)
-dbThread.start()
+db.start(v)
+
 
 reg = UserRegistrationHandler()
-regThread = threading.Thread(target=reg.waitForMessages)
-regThread.start()
+reg.start(v)
 
 raw_input("Crear usuarios")
 u1 = User("user1")
-u1.turnNotificationsOn()
+u1.turnNotificationsOn(v)
 u2 = User("user2")
-u2.turnNotificationsOn()
+u2.turnNotificationsOn(v)
 u3 = User("user3")
-u3.turnNotificationsOn()
+u3.turnNotificationsOn(v)
 
 u2.sendFollowUserPetition("user1")
 u3.sendFollowUserPetition("user1")
@@ -69,3 +75,5 @@ u1.sendRequestMessage("user2")
 
 
 
+
+signal.pause()

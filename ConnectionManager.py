@@ -2,6 +2,8 @@ import pika
 
 from MessageUtils import MessageUtils
 
+CONNECTION_TIMEOUT=3
+
 class ConnectionManager:
 
     def __init__(self,ip,port):
@@ -28,7 +30,7 @@ class ConnectionManager:
         self.channel.start_consuming()
 
     def addTimeout(self,timeoutCallback):
-        self.connection.add_timeout(3, timeoutCallback)
+        self.connection.add_timeout(CONNECTION_TIMEOUT, timeoutCallback)
 
     def stopListeningToQueue(self):
         self.channel.stop_consuming()

@@ -1,9 +1,16 @@
+import signal
+import threading
+
 from ActionMessage import ActionMessage, ShutdownSystemPetition, FollowUserPetition, FollowHashtagPetition
 from Buzz import Buzz
 from ConnectionManager import ConnectionManager
 from DBRequest import QueryRequest, DeleteRequest
+from GenericListener import GenericListener
 from MessageUtils import MessageUtils
 import logging
+
+from ThreadSafeVariable import ThreadSafeVariable
+
 logging.getLogger("pika").setLevel(logging.WARNING)
 
 
@@ -27,14 +34,12 @@ to the dispatcher. Then, the dispatcher will redirect or replicate the user mess
 how the message should be processed.
 If it's a Buzz, it will be sent to the UserRegistraionHandler to nofity registered users and to the 
 DBHandler to persist the message.'''
-class Dispatcher:
+class Dispatcher(GenericListener):
 
     def __init__(self):
-        logging.getLogger(self.__class__.__name__)
-        logging.basicConfig(filename="app.log",format='%(levelname)s:%(asctime)s:%(module)s@%(lineno)d:%(message)s', level=logging.INFO)
-        self.incomingUserMessagesConnectionManager = ConnectionManager(INCOMING_CONNECTION_IP,INCOMING_CONNECTION_PORT)
-        self.incomingUserMessagesConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
-        self.incomingUserMessagesConnectionManager.declareQueue(USER_REGISTRATION_QUEUE_NAME)
+        GenericListener.__init__(self,INCOMING_CONNECTION_IP,INCOMING_CONNECTION_PORT)
+        self.incomingConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
+        self.incomingConnectionManager.declareQueue(USER_REGISTRATION_QUEUE_NAME)
         self.outgoingUserRegistrationHandlerConnectionManager = ConnectionManager(USER_REGISTRATION_HANDLER_IP,USER_REGISTRATION_HANLDER_PORT)
         self.outgoingIndexConnectionManager = ConnectionManager(INDEX_HANDLER_IP,INDEX_HANDLER_PORT)
         self.outgoingIndexConnectionManager.declareExchange(INDEX_HANDLER_EXCHANGE_NAME)
@@ -60,12 +65,6 @@ class Dispatcher:
         logging.info("Processing delete request")
         self.outgoingBuzzDBConnectionManager.writeToExchange(BUZZ_DB_HANDLER_EXCHANGE_NAME,str(request.uId),request)
 
-    def handleShutdown(self,shutdownmessage):
-        '''When shutdown, the message should be sent to every node'''
-        self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(USER_REGISTRATION_QUEUE_NAME,shutdownmessage)
-        self.outgoingUserRegistrationHandlerConnectionManager.stopListeningToQueue()
-        self.incomingUserMessagesConnectionManager.close()
-        self.outgoingUserRegistrationHandlerConnectionManager.close()
 
     def onMessageReceived(self, channel, method, properties, body):
         logging.info("Received message")
@@ -80,11 +79,12 @@ class Dispatcher:
             self.handleQueryRequest(message)
         elif(isinstance(message,DeleteRequest)):
             self.handleDeleteRequest(message)
-        elif(isinstance(message,ShutdownSystemPetition)):
-            self.incomingUserMessagesConnectionManager.ack(method.delivery_tag)
-            self.handleShutdown(message)
-            return
-        self.incomingUserMessagesConnectionManager.ack(method.delivery_tag)
+        self.incomingConnectionManager.ack(method.delivery_tag)
 
-    def start(self):
-        self.incomingUserMessagesConnectionManager.listenToQueue(INCOMING_QUEUE_NAME,self.onMessageReceived)
+
+    def _start(self):
+         self.incomingConnectionManager.addTimeout(self.onTimeout)
+         self.incomingConnectionManager.listenToQueue(INCOMING_QUEUE_NAME, self.onMessageReceived)
+
+
+

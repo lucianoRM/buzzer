@@ -43,6 +43,7 @@ class DBIndexManager:
         return -1
 
     def getFileLines(self,filename):
+        lines = []
         try:
             file = open(filename,'r')
             fcntl.flock(file,fcntl.LOCK_SH)
