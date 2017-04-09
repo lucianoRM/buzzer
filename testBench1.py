@@ -1,3 +1,5 @@
+import random
+import string
 import threading
 import logging
 import time
@@ -7,6 +9,7 @@ import signal
 from DBBuzzProcessingPool import DBBuzzProcessingPool
 from DBIndexProcessingPool import DBIndexProcessingPool
 from Dispatcher import Dispatcher
+from TTManager import TTManager
 from ThreadSafeVariable import ThreadSafeVariable
 from User import User
 from UserRegistrationHandler import UserRegistrationHandler
@@ -23,15 +26,18 @@ raw_input("Empezar sistema")
 dispatcher = Dispatcher()
 dispatcher.start(v)
 
-index = DBIndexProcessingPool(["*"])
+index = DBIndexProcessingPool(["#"])
 index.start(v)
 
-db = DBBuzzProcessingPool(["*"])
+db = DBBuzzProcessingPool(["#"])
 db.start(v)
 
 
 reg = UserRegistrationHandler()
 reg.start(v)
+
+tt = TTManager()
+tt.start(v)
 
 raw_input("Crear usuarios")
 u1 = User("user1")
@@ -71,6 +77,18 @@ u2.sendDeleteMessage(id)
 time.sleep(1)
 raw_input("user1 volver a checkear mensajes de user2")
 u1.sendRequestMessage("user2")
+
+time.sleep(1)
+raw_input("user2 pedi los TT")
+u2.requestTrendingTopics()
+
+time.sleep(1)
+raw_input("go crazy")
+users = [u1,u2,u3]
+for i in xrange(10000):
+    actualUser = random.choice(users)
+    actualUser.sendBuzz(''.join(random.choice(string.ascii_uppercase) for _ in range(141)))
+
 
 
 

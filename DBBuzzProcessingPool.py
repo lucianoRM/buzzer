@@ -43,7 +43,6 @@ class DBBuzzProcessingPool(GenericListener):
 
     def __init__(self,accessingKeys):
         GenericListener.__init__(self,INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
-        self.accessingKeys = accessingKeys
         self.semaphore = threading.Semaphore(POOL_SIZE)
         self.incomingConnectionManager.declareExchange(EXCHANGE_NAME)
         self.queueName = self.incomingConnectionManager.declareQueue()
@@ -51,7 +50,6 @@ class DBBuzzProcessingPool(GenericListener):
             self.incomingConnectionManager.bindQueue(EXCHANGE_NAME,self.queueName,accessingKey)
 
     def processRequest(self,ch, method, properties, body):
-        print self.accessingKeys
         request = MessageUtils.deserialize(body)
         logging.info("Request received")
         self.semaphore.acquire()

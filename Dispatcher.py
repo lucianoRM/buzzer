@@ -10,6 +10,7 @@ from MessageUtils import MessageUtils
 import logging
 
 from ThreadSafeVariable import ThreadSafeVariable
+from TrendingTopic import TTRequest
 
 logging.getLogger("pika").setLevel(logging.WARNING)
 
@@ -27,6 +28,9 @@ INDEX_HANDLER_EXCHANGE_NAME = 'index-exchange'
 BUZZ_DB_HANDLER_IP = 'localhost'
 BUZZ_DB_HANDLER_PORT = 5672
 BUZZ_DB_HANDLER_EXCHANGE_NAME = 'buzz-exchange'
+TT_HANDLER_IP = 'localhost'
+TT_HANDLER_PORT = 5672
+TT_HANDLER_QUEUE_NAME = 'tt-queue'
 
 
 '''This class handles the redirection of messages. Users can send Buzzes or action messages
@@ -41,18 +45,21 @@ class Dispatcher(GenericListener):
         self.incomingConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
         self.incomingConnectionManager.declareQueue(USER_REGISTRATION_QUEUE_NAME)
         self.outgoingUserRegistrationHandlerConnectionManager = ConnectionManager(USER_REGISTRATION_HANDLER_IP,USER_REGISTRATION_HANLDER_PORT)
+        self.outgoingUserRegistrationHandlerConnectionManager.declareQueue(USER_REGISTRATION_QUEUE_NAME)
         self.outgoingIndexConnectionManager = ConnectionManager(INDEX_HANDLER_IP,INDEX_HANDLER_PORT)
         self.outgoingIndexConnectionManager.declareExchange(INDEX_HANDLER_EXCHANGE_NAME)
         self.outgoingBuzzDBConnectionManager = ConnectionManager(BUZZ_DB_HANDLER_IP,BUZZ_DB_HANDLER_PORT)
         self.outgoingBuzzDBConnectionManager.declareExchange(BUZZ_DB_HANDLER_EXCHANGE_NAME)
+        self.outgoingTTConnectionManager = ConnectionManager(TT_HANDLER_IP,TT_HANDLER_PORT)
+        self.outgoingTTConnectionManager.declareQueue(TT_HANDLER_QUEUE_NAME)
 
 
     def handleBuzz(self,buzz):
         logging.info("Processing buzz")
         self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(USER_REGISTRATION_QUEUE_NAME,buzz)
         self.outgoingBuzzDBConnectionManager.writeToExchange(BUZZ_DB_HANDLER_EXCHANGE_NAME,".".join(list(str(buzz.uId))),buzz)
-        print ".".join(list(str(buzz.uId)))
         self.outgoingIndexConnectionManager.writeToExchange(INDEX_HANDLER_EXCHANGE_NAME,".".join(list(buzz.user)),buzz)
+        self.outgoingTTConnectionManager.writeToQueue(TT_HANDLER_QUEUE_NAME,buzz)
 
     def handleFollowingPetition(self,petition):
         logging.info("Processing following petition")
@@ -66,6 +73,9 @@ class Dispatcher(GenericListener):
         logging.info("Processing delete request")
         self.outgoingBuzzDBConnectionManager.writeToExchange(BUZZ_DB_HANDLER_EXCHANGE_NAME,str(request.uId),request)
 
+    def handleTTRequest(self,request):
+        logging.info("Processing tt request")
+        self.outgoingTTConnectionManager.writeToQueue(TT_HANDLER_QUEUE_NAME,request)
 
     def onMessageReceived(self, channel, method, properties, body):
         logging.info("Received message")
@@ -80,6 +90,8 @@ class Dispatcher(GenericListener):
             self.handleQueryRequest(message)
         elif(isinstance(message,DeleteRequest)):
             self.handleDeleteRequest(message)
+        elif(isinstance(message,TTRequest)):
+            self.handleTTRequest(message)
         self.incomingConnectionManager.ack(method.delivery_tag)
 
 

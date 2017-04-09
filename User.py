@@ -10,6 +10,9 @@ from ConnectionManager import ConnectionManager
 from DBRequest import QueryRequest, DeleteRequest
 from Notifier import Notifier
 import logging
+
+from TrendingTopic import TTRequest
+
 logging.getLogger("pika").setLevel(logging.WARNING)
 
 
@@ -68,6 +71,10 @@ class User:
         self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,request)
         logging.info("Sent delete message")
 
+    def requestTrendingTopics(self):
+        request = TTRequest(self.name)
+        self.connectionManager.writeToQueue(SERVER_QUEUE_NAME,request)
+        logging.info("Sent TT request")
 
 
 

@@ -35,7 +35,6 @@ class DBIndexProcessingPool(GenericListener):
 
     def __init__(self,accessingKeys):
         GenericListener.__init__(self,INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
-        self.accessingKeys = accessingKeys
         self.semaphore = threading.Semaphore(POOL_SIZE)
         self.incomingConnectionManager.declareExchange(EXCHANGE_NAME)
         self.queueName = self.incomingConnectionManager.declareQueue()

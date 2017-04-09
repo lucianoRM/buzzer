@@ -1,16 +1,12 @@
 import uuid
-from threading import Thread
 
-import time
 
 from Buzz import Buzz
-from ConnectionManager import ConnectionManager
 from GenericListener import GenericListener
 from InvalidMessageException import InvalidMessageException
 from MessageUtils import MessageUtils
-import signal
 
-from ThreadSafeVariable import ThreadSafeVariable
+from TrendingTopic import TTResponse
 
 QUEUE_IP = 'localhost'
 QUEUE_PORT = 5672
@@ -28,20 +24,22 @@ class Notifier(GenericListener):
 
 
     def notificationCallback(self, channel ,method ,properties ,body):
-        if(body == self.EXIT_KEY):
-            self.incomingConnectionManager.stopListeningToQueue()
-        else:
-            try:
-                buzz = MessageUtils.deserialize(body)
-            except InvalidMessageException as e:
-                self.incomingConnectionManager.ack(method.delivery_tag)
-                raise e
-            print "\n======" + self.queueName + ":Buzz received======="
-            print "ID" + str(buzz.uId)
-            print "USER: " + buzz.user
-            print "MSG: " + buzz.message
-            print "\n"
+        try:
+            obj = MessageUtils.deserialize(body)
+        except InvalidMessageException as e:
             self.incomingConnectionManager.ack(method.delivery_tag)
+            raise e
+        if(isinstance(obj,TTResponse)):
+            print "\n=====TrendingTopics======"
+            for tt in obj.valuesList:
+                print tt[0] + " : " + str(tt[1])
+        elif(isinstance(obj,Buzz)):
+            print "\n======" + self.queueName + ":Buzz received======="
+            print "ID" + str(obj.uId)
+            print "USER: " + obj.user
+            print "MSG: " + obj.message
+            print "\n"
+        self.incomingConnectionManager.ack(method.delivery_tag)
 
     def _start(self):
         self.incomingConnectionManager.addTimeout(self.onTimeout)
