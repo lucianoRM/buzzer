@@ -12,7 +12,6 @@ class GenericListener:
 
     def __init__(self, incomingConnectionIP, incomingConnectionPort):
         __metaclass__ = abc.ABCMeta
-        logging.getLogger(self.__class__.__name__)
         logging.basicConfig(filename="app.log", format='%(levelname)s:%(asctime)s:%(module)s@%(lineno)d:%(message)s',level=logging.INFO)
         self.incomingConnectionManager = ConnectionManager(incomingConnectionIP, incomingConnectionPort)
         self.listeningThread = None

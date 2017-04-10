@@ -35,7 +35,7 @@ class Notifier(GenericListener):
                 print tt[0] + " : " + str(tt[1])
         elif(isinstance(obj,Buzz)):
             print "\n======" + self.queueName + ":Buzz received======="
-            print "ID" + str(obj.uId)
+            print "ID:" + str(obj.uId)
             print "USER: " + obj.user
             print "MSG: " + obj.message
             print "\n"

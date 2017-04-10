@@ -1,5 +1,3 @@
-import signal
-import threading
 
 from ActionMessage import ActionMessage, ShutdownSystemPetition, FollowUserPetition, FollowHashtagPetition
 from Buzz import Buzz
@@ -9,7 +7,6 @@ from GenericListener import GenericListener
 from MessageUtils import MessageUtils
 import logging
 
-from ThreadSafeVariable import ThreadSafeVariable
 from TrendingTopic import TTRequest
 
 logging.getLogger("pika").setLevel(logging.WARNING)
@@ -42,6 +39,14 @@ class Dispatcher(GenericListener):
 
     def __init__(self):
         GenericListener.__init__(self,INCOMING_CONNECTION_IP,INCOMING_CONNECTION_PORT)
+        self.logger = logging.getLogger("dispatcher")
+        formatter = logging.Formatter('%(levelname)s:%(asctime)s:%(module)s@%(lineno)d:%(message)s')
+        fileHandler = logging.FileHandler("dispatcher.log", mode='w')
+        fileHandler.setFormatter(formatter)
+        self.logger.setLevel(logging.DEBUG)
+        self.logger.addHandler(fileHandler)
+        self.logger.addHandler(fileHandler)
+
         self.incomingConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
         self.incomingConnectionManager.declareQueue(USER_REGISTRATION_QUEUE_NAME)
         self.outgoingUserRegistrationHandlerConnectionManager = ConnectionManager(USER_REGISTRATION_HANDLER_IP,USER_REGISTRATION_HANLDER_PORT)
@@ -79,18 +84,25 @@ class Dispatcher(GenericListener):
 
     def onMessageReceived(self, channel, method, properties, body):
         logging.info("Received message")
+        self.logger.info("Received message")
         message = MessageUtils.deserialize(body)
         if(isinstance(message,Buzz)):
+            self.logger.info("It's a buzz: [" + str(message.uId) + ";" + message.user + ";" + message.message + ']')
             self.handleBuzz(message)
         elif(isinstance(message,FollowUserPetition)):
+            self.logger.info("It's a following petition from: " + message.user + " to follow: " + message.otherUser)
             self.handleFollowingPetition(message)
         elif(isinstance(message,FollowHashtagPetition)):
+            self.logger.info("It's a following petition from: " + message.user + " to follow: " + message.hashtag)
             self.handleFollowingPetition(message)
         elif(isinstance(message,QueryRequest)):
+            self.logger.info("It's a request for buzzes from: " + message.user + " to get: " + message.tag)
             self.handleQueryRequest(message)
         elif(isinstance(message,DeleteRequest)):
+            self.logger.info("It's a delete request from: " + message.user + " to delete: " + str(message.uId))
             self.handleDeleteRequest(message)
         elif(isinstance(message,TTRequest)):
+            self.logger.info("It's a request for trending topics from: " + message.requestingUser)
             self.handleTTRequest(message)
         self.incomingConnectionManager.ack(method.delivery_tag)
 
