@@ -2,15 +2,18 @@ import random
 import signal
 import threading
 import time
-
 from listener.Dispatcher import Dispatcher
-
 from db.DBBuzzProcessingPool import DBBuzzProcessingPool
 from db.DBIndexProcessingPool import DBIndexProcessingPool
 from listener.TTManager import TTManager
 from listener.UserRegistrationHandler import UserRegistrationHandler
 from user.User import User
 from utils.ThreadSafeVariable import ThreadSafeVariable
+
+
+CONCURRENT_USERS = 100
+USER_WAITING_TIME = 1
+
 
 v = ThreadSafeVariable(True)
 
@@ -32,10 +35,10 @@ def run(id,v):
         for i in xrange(random.randint(1,5)):
             message += ' ' + random.choice(hashtagOrNot) + random.choice(wordList)
         u.sendBuzz(message)
-        time.sleep(1)
+        time.sleep(USER_WAITING_TIME)
 
 
-#raw_input("Empezar sistema")
+raw_input("Empezar sistema")
 dispatcher = Dispatcher()
 dispatcher.start(v)
 
@@ -52,9 +55,12 @@ reg.start(v)
 tt = TTManager()
 tt.start(v)
 
-# for i in xrange(100):
-#     t = threading.Thread(target=run, args=(i,v))
-#     t.start()
+time.sleep(1)
+raw_input("Crear usuarios")
+for i in xrange(CONCURRENT_USERS):
+     t = threading.Thread(target=run, args=(i,v))
+     t.start()
+
 
 name = raw_input("select name: ")
 user = User(name)
