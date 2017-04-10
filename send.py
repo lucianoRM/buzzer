@@ -1,10 +1,11 @@
-import pika
 import random
 import string
 
-from Buzz import Buzz
-from DBRequest import DBRequest, QueryRequest, DeleteRequest
-from MessageUtils import MessageUtils
+import pika
+
+from db.DBRequest import QueryRequest, DeleteRequest
+from messages.Buzz import Buzz
+from utils.MessageUtils import MessageUtils
 
 names = ['luciano','juan','pedro','pepe','roberto']
 

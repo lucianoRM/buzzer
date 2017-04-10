@@ -1,17 +1,11 @@
-import threading
-
-import time
-
-import signal
-
-from ActionMessage import FollowHashtagPetition, FollowUserPetition, ShutdownSystemPetition
-from Buzz import Buzz
-from ConnectionManager import ConnectionManager
-from DBRequest import QueryRequest, DeleteRequest
-from Notifier import Notifier
 import logging
 
-from TrendingTopic import TTRequest
+from Notifier import Notifier
+from connection.ConnectionManager import ConnectionManager
+from db.DBRequest import QueryRequest, DeleteRequest
+from messages.ActionMessage import FollowHashtagPetition, FollowUserPetition
+from messages.Buzz import Buzz
+from messages.TrendingTopic import TTRequest
 
 logging.getLogger("pika").setLevel(logging.WARNING)
 

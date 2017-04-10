@@ -1,19 +1,12 @@
 import fcntl
-import threading
-
-import time
-
-import signal
-
-from ActionMessage import ShutdownSystemPetition,FollowUserPetition,FollowHashtagPetition
-from Buzz import Buzz
-from ConnectionManager import ConnectionManager
-from GenericListener import GenericListener
-from MessageUtils import MessageUtils
-import os
 import logging
+import os
 
-from ThreadSafeVariable import ThreadSafeVariable
+from connection.ConnectionManager import ConnectionManager
+from messages.ActionMessage import FollowUserPetition, FollowHashtagPetition
+from messages.Buzz import Buzz
+from listener.GenericListener import GenericListener
+from utils.MessageUtils import MessageUtils
 
 INCOMING_QUEUE_IP = 'localhost'
 INCOMING_QUEUE_PORT = 5672

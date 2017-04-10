@@ -1,11 +1,8 @@
 import abc
 import logging
-
-import signal
 import threading
 
-from ConnectionManager import ConnectionManager
-from ThreadSafeVariable import ThreadSafeVariable
+from connection.ConnectionManager import ConnectionManager
 
 
 class GenericListener:

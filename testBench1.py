@@ -1,18 +1,14 @@
-import random
-import string
-import threading
-import logging
+import signal
 import time
 
-import signal
+from listener.Dispatcher import Dispatcher
 
-from DBBuzzProcessingPool import DBBuzzProcessingPool
-from DBIndexProcessingPool import DBIndexProcessingPool
-from Dispatcher import Dispatcher
-from TTManager import TTManager
-from ThreadSafeVariable import ThreadSafeVariable
-from User import User
-from UserRegistrationHandler import UserRegistrationHandler
+from db.DBBuzzProcessingPool import DBBuzzProcessingPool
+from db.DBIndexProcessingPool import DBIndexProcessingPool
+from listener.TTManager import TTManager
+from listener.UserRegistrationHandler import UserRegistrationHandler
+from user.User import User
+from utils.ThreadSafeVariable import ThreadSafeVariable
 
 v = ThreadSafeVariable(True)
 
@@ -83,11 +79,24 @@ raw_input("user2 pedi los TT")
 u2.requestTrendingTopics()
 
 time.sleep(1)
-raw_input("go crazy")
-users = [u1,u2,u3]
-for i in xrange(10000):
-    actualUser = random.choice(users)
-    actualUser.sendBuzz(''.join(random.choice(string.ascii_uppercase) for _ in range(141)))
+raw_input("Generar mas TT")
+u1.sendBuzz("Soy #user1 y digo: 1")
+u1.sendBuzz("Soy #user1 y digo: 2")
+u1.sendBuzz("Soy #user1 y digo: 3")
+u1.sendBuzz("Soy #user1 y digo: 4")
+u2.sendBuzz("Soy #user2 y digo: 1")
+u2.sendBuzz("Soy #user2 y digo: 2")
+u2.sendBuzz("Soy #user2 y digo: 3")
+u2.sendBuzz("Soy #user2 y digo: 4")
+u3.sendBuzz("Soy #user3 y digo: 1")
+u3.sendBuzz("Soy #user3 y digo: 2")
+u3.sendBuzz("Soy #user3 y digo: 3")
+u3.sendBuzz("Soy #user3 y digo: 4")
+
+time.sleep(1)
+raw_input("user2 pedi los TT")
+u2.requestTrendingTopics()
+
 
 
 

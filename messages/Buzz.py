@@ -1,6 +1,7 @@
-import uuid
 import re
-from InvalidMessageException import InvalidMessageException
+import uuid
+
+from exception.InvalidMessageException import InvalidMessageException
 
 MAX_MESSAGE_LENGTH = 141
 

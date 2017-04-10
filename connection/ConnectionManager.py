@@ -1,6 +1,6 @@
 import pika
 
-from MessageUtils import MessageUtils
+from utils.MessageUtils import MessageUtils
 
 CONNECTION_TIMEOUT=3
 
@@ -26,7 +26,7 @@ class ConnectionManager:
         message = messageObject
         if (not isinstance(messageObject, str)):
             message = MessageUtils.serialize(messageObject)
-        self.channel.basic_publish(exchange=exchangeName,routing_key=key, body= message)
+        self.channel.basic_publish(exchange=exchangeName,routing_key=".".join(list(str(key))), body= message)
 
     def listenToQueue(self, queueName, callback):
         self.channel.basic_consume(callback, queueName)

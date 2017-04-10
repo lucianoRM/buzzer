@@ -1,7 +1,4 @@
-from ActionMessage import ActionMessage,FollowUserPetition,ShutdownSystemPetition
-from Buzz import Buzz
-from MessageUtils import MessageUtils
-from User import User
+from user.User import User
 
 name = raw_input("select name")
 user = User(name)

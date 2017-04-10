@@ -1,7 +1,7 @@
-from DBBuzzProcessingPool import DBBuzzProcessingPool
-from Dispatcher import Dispatcher
-from ThreadSafeVariable import ThreadSafeVariable
-from User import User
+from db.DBBuzzProcessingPool import DBBuzzProcessingPool
+from listener.Dispatcher import Dispatcher
+from user.User import User
+from utils.ThreadSafeVariable import ThreadSafeVariable
 
 v = ThreadSafeVariable(True)
 d1 = DBBuzzProcessingPool(["a.#"])

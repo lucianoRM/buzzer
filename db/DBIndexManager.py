@@ -1,8 +1,8 @@
 import fcntl
 import logging
 
-from ConnectionManager import ConnectionManager
-from DBRequest import DBRequest, QueryRequest
+from DBRequest import QueryRequest
+from connection.ConnectionManager import ConnectionManager
 
 OUTGOING_QUEUE_IP = 'localhost'
 OUTGOING_QUEUE_PORT = 5672

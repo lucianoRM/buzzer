@@ -1,12 +1,10 @@
 import uuid
 
-
-from Buzz import Buzz
-from GenericListener import GenericListener
-from InvalidMessageException import InvalidMessageException
-from MessageUtils import MessageUtils
-
-from TrendingTopic import TTResponse
+from exception.InvalidMessageException import InvalidMessageException
+from messages.Buzz import Buzz
+from messages.TrendingTopic import TTResponse
+from listener.GenericListener import GenericListener
+from utils.MessageUtils import MessageUtils
 
 QUEUE_IP = 'localhost'
 QUEUE_PORT = 5672

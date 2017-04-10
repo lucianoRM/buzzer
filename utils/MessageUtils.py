@@ -1,6 +1,6 @@
 import pickle
 
-from InvalidMessageException import InvalidMessageException
+from exception.InvalidMessageException import InvalidMessageException
 
 '''Handles serialization and deserialization of messages'''
 

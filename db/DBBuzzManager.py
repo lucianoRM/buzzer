@@ -1,7 +1,8 @@
 import fcntl
 import logging
-from Buzz import Buzz
-from ConnectionManager import ConnectionManager
+
+from connection.ConnectionManager import ConnectionManager
+from messages.Buzz import Buzz
 
 ROOT_PATH = './buzz'
 OUTGOING_CONNECTION_IP = 'localhost'

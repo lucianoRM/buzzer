@@ -1,13 +1,12 @@
-
-from ActionMessage import ActionMessage, ShutdownSystemPetition, FollowUserPetition, FollowHashtagPetition
-from Buzz import Buzz
-from ConnectionManager import ConnectionManager
-from DBRequest import QueryRequest, DeleteRequest
-from GenericListener import GenericListener
-from MessageUtils import MessageUtils
 import logging
 
-from TrendingTopic import TTRequest
+from GenericListener import GenericListener
+from connection.ConnectionManager import ConnectionManager
+from db.DBRequest import QueryRequest, DeleteRequest
+from messages.ActionMessage import FollowUserPetition, FollowHashtagPetition
+from messages.Buzz import Buzz
+from messages.TrendingTopic import TTRequest
+from utils.MessageUtils import MessageUtils
 
 logging.getLogger("pika").setLevel(logging.WARNING)
 
@@ -62,8 +61,8 @@ class Dispatcher(GenericListener):
     def handleBuzz(self,buzz):
         logging.info("Processing buzz")
         self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(USER_REGISTRATION_QUEUE_NAME,buzz)
-        self.outgoingBuzzDBConnectionManager.writeToExchange(BUZZ_DB_HANDLER_EXCHANGE_NAME,".".join(list(str(buzz.uId))),buzz)
-        self.outgoingIndexConnectionManager.writeToExchange(INDEX_HANDLER_EXCHANGE_NAME,".".join(list(buzz.user)),buzz)
+        self.outgoingBuzzDBConnectionManager.writeToExchange(BUZZ_DB_HANDLER_EXCHANGE_NAME,str(buzz.uId),buzz)
+        self.outgoingIndexConnectionManager.writeToExchange(INDEX_HANDLER_EXCHANGE_NAME,buzz.user,buzz)
         self.outgoingTTConnectionManager.writeToQueue(TT_HANDLER_QUEUE_NAME,buzz)
 
     def handleFollowingPetition(self,petition):
