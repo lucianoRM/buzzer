@@ -110,6 +110,8 @@ class UserRegistrationHandler(GenericListener):
             logging.info("processed buzz")
             self.notifyFollowers(message)
         self.incomingConnectionManager.ack(method.delivery_tag)
+        if not self.keepRunning.get():
+            self.stop()
 
 
 

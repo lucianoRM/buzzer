@@ -104,6 +104,8 @@ class Dispatcher(GenericListener):
             self.logger.info("It's a request for trending topics from: " + message.requestingUser)
             self.handleTTRequest(message)
         self.incomingConnectionManager.ack(method.delivery_tag)
+        if not self.keepRunning.get():
+            self.stop()
 
 
     def _start(self):

@@ -80,18 +80,24 @@ class DBIndexManager:
         self.writeLines(filename,filelines)
 
     def getIdList(self,tag):
+        print tag
         filename = INDEX_PATH + "/" + self.getFileKey(tag)
         args = []
+        found = False
         try:
             file = open(filename, 'r')
             fcntl.flock(file,fcntl.LOCK_SH)
             for line in file:
                 args = line.split(";")
                 if(args[0] == tag):
+                    print "found!"
+                    found = True
                     break
             fcntl.flock(file,fcntl.LOCK_UN)
             file.close()
-            return [line.rstrip() for line in args[1:]]
+            if(found):
+                return [line.rstrip() for line in args[1:]]
+            return []
         except IOError as e:
             logging.warn(e)
             return []
@@ -106,7 +112,6 @@ class DBIndexManager:
             logging.info("Sending id to DB")
             outgoingConnectionManager.writeToExchange(OUTGOING_EXCHANGE_NAME,id,QueryRequest(request.user,id))
         outgoingConnectionManager.close()
-
 
 
 

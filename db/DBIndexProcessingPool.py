@@ -48,6 +48,8 @@ class DBIndexProcessingPool(GenericListener):
         thread = threading.Thread(target=worker.run, args=(self.semaphore,request))
         thread.start()
         self.incomingConnectionManager.ack(method.delivery_tag)
+        if not self.keepRunning.get():
+            self.stop()
 
     def _start(self):
         self.incomingConnectionManager.addTimeout(self.onTimeout)

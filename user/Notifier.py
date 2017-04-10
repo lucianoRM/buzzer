@@ -38,6 +38,8 @@ class Notifier(GenericListener):
             print "MSG: " + obj.message
             print "\n"
         self.incomingConnectionManager.ack(method.delivery_tag)
+        if not self.keepRunning.get():
+            self.stop()
 
     def _start(self):
         self.incomingConnectionManager.addTimeout(self.onTimeout)

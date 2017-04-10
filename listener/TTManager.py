@@ -76,6 +76,8 @@ class TTManager(GenericListener):
             logging.info("Responding with TTs")
             self.processTTRequest(messageObject)
         self.incomingConnectionManager.ack(method.delivery_tag)
+        if not self.keepRunning.get():
+            self.stop()
 
 
     def loadHashtag(self,hashtag,uId):
