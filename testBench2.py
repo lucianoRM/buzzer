@@ -11,8 +11,8 @@ from user.User import User
 from utils.ThreadSafeVariable import ThreadSafeVariable
 
 
-CONCURRENT_USERS = 100
-USER_WAITING_TIME = 1
+CONCURRENT_USERS = 10
+USER_WAITING_TIME = 0.1
 
 
 v = ThreadSafeVariable(True)
@@ -37,25 +37,6 @@ def run(id,v):
         u.sendBuzz(message)
         time.sleep(USER_WAITING_TIME)
 
-
-raw_input("Empezar sistema")
-dispatcher = Dispatcher()
-dispatcher.start(v)
-
-index = DBIndexProcessingPool(["#"])
-index.start(v)
-
-db = DBBuzzProcessingPool(["#"])
-db.start(v)
-
-
-reg = UserRegistrationHandler()
-reg.start(v)
-
-tt = TTManager()
-tt.start(v)
-
-time.sleep(1)
 raw_input("Crear usuarios")
 for i in xrange(CONCURRENT_USERS):
      t = threading.Thread(target=run, args=(i,v))

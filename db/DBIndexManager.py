@@ -90,7 +90,6 @@ class DBIndexManager:
             for line in file:
                 args = line.split(";")
                 if(args[0] == tag):
-                    print "found!"
                     found = True
                     break
             fcntl.flock(file,fcntl.LOCK_UN)

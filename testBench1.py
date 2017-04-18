@@ -1,12 +1,6 @@
 import signal
 import time
 
-from listener.Dispatcher import Dispatcher
-
-from db.DBBuzzProcessingPool import DBBuzzProcessingPool
-from db.DBIndexProcessingPool import DBIndexProcessingPool
-from listener.TTManager import TTManager
-from listener.UserRegistrationHandler import UserRegistrationHandler
 from user.User import User
 from utils.ThreadSafeVariable import ThreadSafeVariable
 
@@ -17,23 +11,6 @@ def stop(signal,frame):
     exit(0)
 
 signal.signal(signal.SIGINT,stop)
-
-raw_input("Empezar sistema")
-dispatcher = Dispatcher()
-dispatcher.start(v)
-
-index = DBIndexProcessingPool(["#"])
-index.start(v)
-
-db = DBBuzzProcessingPool(["#"])
-db.start(v)
-
-
-reg = UserRegistrationHandler()
-reg.start(v)
-
-tt = TTManager()
-tt.start(v)
 
 raw_input("Crear usuarios")
 u1 = User("user1")
@@ -96,11 +73,5 @@ u3.sendBuzz("Soy #user3 y digo: 4")
 time.sleep(1)
 raw_input("user2 pedi los TT")
 u2.requestTrendingTopics()
-
-
-
-
-
-
 
 signal.pause()
