@@ -3,6 +3,7 @@ import logging
 import threading
 
 from connection.ConnectionManager import ConnectionManager
+from utils.ThreadSafeVariable import ThreadSafeVariable
 
 
 class GenericListener:
@@ -12,9 +13,11 @@ class GenericListener:
         logging.basicConfig(filename="app.log", format='%(levelname)s:%(asctime)s:%(module)s@%(lineno)d:%(message)s',level=logging.INFO)
         self.incomingConnectionManager = ConnectionManager(incomingConnectionIP, incomingConnectionPort)
         self.listeningThread = None
+        self.v = ThreadSafeVariable(True)
 
     def onTimeout(self):
         if (not self.keepRunning.get()):
+            self.v.set(False)
             self.stop()
             return
         self.incomingConnectionManager.addTimeout(self.onTimeout)

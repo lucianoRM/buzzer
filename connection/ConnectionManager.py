@@ -51,4 +51,10 @@ class ConnectionManager:
         self.channel.cancel()
         self.connection.close()
 
+    def delete_queue(self,name):
+        self.channel.queue_delete(queue=name)
+
+    def delete_exchange(self,name):
+        self.channel.exchange_delete(exchange=name)
+
 
