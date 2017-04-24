@@ -16,6 +16,7 @@ from utils.MessageUtils import MessageUtils
 
 
 class Worker:
+
     def run(self,queue,shouldRun):
         while(shouldRun.get()):
             logging.info("Processing request")

@@ -39,9 +39,19 @@ class Dispatcher(GenericListener):
         self.outgoingBuzzDBConnectionManager.declareExchange(config.dbExchange())
         self.outgoingTTConnectionManager = ConnectionManager(config.ip(),config.port())
         self.outgoingTTConnectionManager.declareQueue(config.ttQueueName())
+        self.dispatcherDicc = {
+            Buzz: self.handleBuzz,
+            FollowHashtagPetition: self.handleFollowingPetition,
+            FollowUserPetition: self.handleFollowingPetition,
+            QueryRequest: self .handleQueryRequest,
+            DeleteRequest: self.handleDeleteRequest,
+            TTRequest: self.handleTTRequest
+        }
 
 
     def handleBuzz(self,buzz):
+        self.logger.info("It's a buzz: [" + str(
+            buzz.uId) + ";" + buzz.user + ";" + buzz.message + ']')
         logging.info("Processing buzz")
         self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(config.registrationQueueName(),buzz)
         self.outgoingBuzzDBConnectionManager.writeToExchange(config.dbExchange(),str(buzz.uId),buzz)
@@ -53,14 +63,21 @@ class Dispatcher(GenericListener):
         self.outgoingUserRegistrationHandlerConnectionManager.writeToQueue(config.registrationQueueName(), petition)
 
     def handleQueryRequest(self, request):
+        self.logger.info(
+            "It's a request for buzzes from: " + request.user + " to get: " + request.tag)
         logging.info("Processing query request ")
         self.outgoingIndexConnectionManager.writeToExchange(config.indexExchange(),request.tag,request)
 
     def handleDeleteRequest(self, request):
+        self.logger.info(
+            "It's a delete request from: " + request.user + " to delete: " + str(
+                request.uId))
         logging.info("Processing delete request")
         self.outgoingBuzzDBConnectionManager.writeToExchange(config.dbExchange(),str(request.uId),request)
 
     def handleTTRequest(self,request):
+        self.logger.info(
+            "It's a request for trending topics from: " + request.requestingUser)
         logging.info("Processing tt request")
         self.outgoingTTConnectionManager.writeToQueue(config.ttQueueName(),request)
 
@@ -68,24 +85,8 @@ class Dispatcher(GenericListener):
         logging.info("Received message")
         self.logger.info("Received message")
         message = MessageUtils.deserialize(body)
-        if(isinstance(message,Buzz)):
-            self.logger.info("It's a buzz: [" + str(message.uId) + ";" + message.user + ";" + message.message + ']')
-            self.handleBuzz(message)
-        elif(isinstance(message,FollowUserPetition)):
-            self.logger.info("It's a following petition from: " + message.user + " to follow: " + message.otherUser)
-            self.handleFollowingPetition(message)
-        elif(isinstance(message,FollowHashtagPetition)):
-            self.logger.info("It's a following petition from: " + message.user + " to follow: " + message.hashtag)
-            self.handleFollowingPetition(message)
-        elif(isinstance(message,QueryRequest)):
-            self.logger.info("It's a request for buzzes from: " + message.user + " to get: " + message.tag)
-            self.handleQueryRequest(message)
-        elif(isinstance(message,DeleteRequest)):
-            self.logger.info("It's a delete request from: " + message.user + " to delete: " + str(message.uId))
-            self.handleDeleteRequest(message)
-        elif(isinstance(message,TTRequest)):
-            self.logger.info("It's a request for trending topics from: " + message.requestingUser)
-            self.handleTTRequest(message)
+        handler = self.dispatcherDicc[message.__class__]
+        handler(message)
         self.incomingConnectionManager.ack(method.delivery_tag)
         if not self.keepRunning.get():
             self.stop()
