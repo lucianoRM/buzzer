@@ -2,14 +2,10 @@ import fcntl
 import logging
 
 from DBRequest import QueryRequest
+from config import config
 from connection.ConnectionManager import ConnectionManager
 
-OUTGOING_QUEUE_IP = 'localhost'
-OUTGOING_QUEUE_PORT = 5672
-OUTGOING_EXCHANGE_NAME = 'buzz-exchange'
-OUTGOING_QUEUE_NAME = 'buzz-queue'
 
-INDEX_PATH = './index'
 
 '''Saves the index to locate users and hashtags in messages'''
 
@@ -70,7 +66,7 @@ class DBIndexManager:
 
     def updateIndex(self, tag, uId):
         uId = str(uId)
-        filename = INDEX_PATH + "/" + self.getFileKey(tag)
+        filename = config.dbIndexManagerFilePath() + "/" + self.getFileKey(tag)
         filelines = []
         try:
             filelines = self.getFileLines(filename)
@@ -84,7 +80,7 @@ class DBIndexManager:
         self.writeLines(filename, filelines)
 
     def getIdList(self, tag):
-        filename = INDEX_PATH + "/" + self.getFileKey(tag)
+        filename =config.dbIndexManagerFilePath() + "/" + self.getFileKey(tag)
         args = []
         found = False
         try:
@@ -107,12 +103,12 @@ class DBIndexManager:
     def processRequest(self, request):
         logging.info("processing " + request.tag)
         ids = self.getIdList(request.tag)
-        outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP,
-                                                      OUTGOING_QUEUE_PORT)
-        outgoingConnectionManager.declareExchange(OUTGOING_EXCHANGE_NAME)
+        outgoingConnectionManager = ConnectionManager(config.ip(),
+                                                      config.port())
+        outgoingConnectionManager.declareExchange(config.dbExchange())
         for id in ids:
             logging.info("Sending id to DB")
-            outgoingConnectionManager.writeToExchange(OUTGOING_EXCHANGE_NAME,
+            outgoingConnectionManager.writeToExchange(config.dbExchange(),
                                                       id,
                                                       QueryRequest(request.user,
                                                                    id))

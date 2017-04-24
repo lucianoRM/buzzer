@@ -1,8 +1,7 @@
 import pika
 
+from config import config
 from utils.MessageUtils import MessageUtils
-
-CONNECTION_TIMEOUT=3
 
 class ConnectionManager:
 
@@ -33,7 +32,7 @@ class ConnectionManager:
         self.channel.start_consuming()
 
     def addTimeout(self,timeoutCallback):
-        self.connection.add_timeout(CONNECTION_TIMEOUT, timeoutCallback)
+        self.connection.add_timeout(config.timeout(),timeoutCallback)
 
     def stopListeningToQueue(self):
         self.channel.stop_consuming()
@@ -56,5 +55,4 @@ class ConnectionManager:
 
     def delete_exchange(self,name):
         self.channel.exchange_delete(exchange=name)
-
 

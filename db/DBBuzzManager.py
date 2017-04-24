@@ -1,12 +1,11 @@
 import fcntl
 import logging
 
+from config import config
 from connection.ConnectionManager import ConnectionManager
 from messages.Buzz import Buzz
 
-ROOT_PATH = './buzz'
-OUTGOING_CONNECTION_IP = 'localhost'
-OUTGOING_CONNECTION_PORT = 5672
+
 
 
 
@@ -33,7 +32,7 @@ class DBBuzzManager:
         return fileKey
 
     def getFilePath(self, uId):
-        return ROOT_PATH + "/" + self.getFileKey(uId)
+        return config.dbBuzzManagerFilePath() + "/" + self.getFileKey(uId)
 
     def store(self,buzz):
         logging.info("Storing buzz")
@@ -101,7 +100,7 @@ class DBBuzzManager:
         b = self.retrieveBuzz(uId)
         if(b):
             logging.info("Sending to user")
-            outgoingConnectionManager = ConnectionManager(OUTGOING_CONNECTION_IP, OUTGOING_CONNECTION_PORT)
+            outgoingConnectionManager = ConnectionManager(config.ip(), config.port())
             outgoingConnectionManager.declareQueue(requestObject.user)
             outgoingConnectionManager.writeToQueue(requestObject.user, b)
             outgoingConnectionManager.close()

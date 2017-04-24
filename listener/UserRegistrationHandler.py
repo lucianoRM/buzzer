@@ -2,19 +2,13 @@ import fcntl
 import logging
 import os
 
+from config import config
 from connection.ConnectionManager import ConnectionManager
 from messages.ActionMessage import FollowUserPetition, FollowHashtagPetition
 from messages.Buzz import Buzz
 from listener.GenericListener import GenericListener
 from utils.MessageUtils import MessageUtils
 
-INCOMING_QUEUE_IP = 'localhost'
-INCOMING_QUEUE_PORT = 5672
-OUTGOING_QUEUE_IP = 'localhost'
-OUTGOING_QUEUE_PORT = 5672
-INCOMING_QUEUE_NAME = 'dispatcher-registrationhandler'
-REGISTRATION_FOLDER = './reg'
-USERS_INFO_FOLDER = './reg/users_info'
 
 
 
@@ -25,21 +19,21 @@ class UserRegistrationHandler(GenericListener):
 
     def __init__(self):
 
-        GenericListener.__init__(self,INCOMING_QUEUE_IP,INCOMING_QUEUE_PORT)
-        self.outgoingConnectionManager = ConnectionManager(OUTGOING_QUEUE_IP,OUTGOING_QUEUE_PORT)
-        self.incomingConnectionManager.declareQueue(INCOMING_QUEUE_NAME)
+        GenericListener.__init__(self,config.ip(),config.port())
+        self.outgoingConnectionManager = ConnectionManager(config.ip(),config.port())
+        self.incomingConnectionManager.declareQueue(config.registrationQueueName())
         self.initializeUserQueues()
 
     def initializeUserQueues(self):
         try:
-            for user in os.listdir(USERS_INFO_FOLDER):
+            for user in os.listdir(config.registrationUsersInfoFolder()):
                 self.incomingConnectionManager.declareQueue(user)
         except:
             logging.error("Folder path not configured for user registration")
 
 
     def updateUserRegistrations(self,user,registrationTarget):
-        filename = USERS_INFO_FOLDER + '/' + user
+        filename = config.registrationUsersInfoFolder() + '/' + user
         try:
             file = open(filename, 'a+r')
             fcntl.flock(file, fcntl.LOCK_EX) #Lock file for writing
@@ -61,7 +55,7 @@ class UserRegistrationHandler(GenericListener):
     def register(self, user, registrationTarget):
         shouldUpdate = self.updateUserRegistrations(user,registrationTarget)
         if(shouldUpdate):
-            filename = REGISTRATION_FOLDER + '/' + registrationTarget
+            filename = config.registrationFolder() + '/' + registrationTarget
             file = open(filename, 'a+r')
             fcntl.flock(file, fcntl.LOCK_EX) #lock file for writing
             file.write(user + '\n')
@@ -70,7 +64,7 @@ class UserRegistrationHandler(GenericListener):
 
 
     def getFollowers(self,target):
-        filename = REGISTRATION_FOLDER + '/' + target
+        filename = config.registrationFolder() + '/' + target
         followers = []
         try:
             file = open(filename,'r')
@@ -117,7 +111,7 @@ class UserRegistrationHandler(GenericListener):
 
     def _start(self):
         self.incomingConnectionManager.addTimeout(self.onTimeout)
-        self.incomingConnectionManager.listenToQueue(INCOMING_QUEUE_NAME, self.onMessageReceived)
+        self.incomingConnectionManager.listenToQueue(config.registrationQueueName(), self.onMessageReceived)
 
 
 

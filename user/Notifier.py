@@ -1,13 +1,13 @@
 import uuid
 
+from config import config
 from exception.InvalidMessageException import InvalidMessageException
 from messages.Buzz import Buzz
 from messages.TrendingTopic import TTResponse
 from listener.GenericListener import GenericListener
 from utils.MessageUtils import MessageUtils
 
-QUEUE_IP = 'localhost'
-QUEUE_PORT = 5672
+
 
 '''Creates a new channel for receiving user notifications'''
 class Notifier(GenericListener):
@@ -16,7 +16,7 @@ class Notifier(GenericListener):
     EXIT_KEY = str(uuid.uuid4())
 
     def __init__(self,queueName):
-        GenericListener.__init__(self,QUEUE_IP,QUEUE_PORT)
+        GenericListener.__init__(self,config.ip(), config.port())
         self.queueName = queueName
         self.incomingConnectionManager.declareQueue(queueName)
 
